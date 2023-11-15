@@ -14,7 +14,7 @@
 }
 
 .site-footer .columns .newsletter {
-    flex: 1 1 25%;
+    flex: 1 1 30%;
     margin-right: 4em;
 }
 
@@ -139,6 +139,15 @@
 h6, .h6 {
     font-size: 1rem;
 }
+h5, h6 {
+    color: #e7e6e6
+}
+
+#newsletter-email-footer::placeholder {
+    color: #fff;
+    opacity: 0.6;
+}
+
 
 
 @media (min-width: 600px) {
