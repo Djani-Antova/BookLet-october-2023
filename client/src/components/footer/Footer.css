@@ -1,0 +1,154 @@
+
+.site-footer {
+    background: #4a6873;
+    color: #fff;
+}
+
+.site-footer .section-container {
+    padding: 4em 1em;
+    border-top: 1px solid #9d9999;
+}
+
+.site-footer .columns {
+    padding-bottom: 1em;
+}
+
+.site-footer .columns .newsletter {
+    flex: 1 1 25%;
+    margin-right: 4em;
+}
+
+.site-footer .newsletter form {
+    display: flex;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    gap:0.4em
+}
+
+.site-footer .newsletter input,
+.site-footer .newsletter button {
+    border-color: #fff;
+    color: #fff;
+    background: #4a6873;
+}
+
+
+.site-footer .newsletter input {
+    flex: 1 1 60%;
+}
+
+.site-footer .newsletter button  {
+    flex: 0 1 40%;
+}
+
+.site-footer .newsletter h5 {
+    font-size: 1em;
+}
+
+.site-footer .columns .newsletter p {
+    opacity: 0.8;
+    font-size: 0.8em;
+    padding: 0.5em 0;
+}
+
+.site-footer .columns .panel {
+    flex: 1 1 auto;
+    padding-left: 5em;
+}
+
+.site-footer .columns .panel ul {
+    padding: 1em 0 0 0;
+}
+
+.site-footer .columns .panel li,
+.site-footer .columns .panel a {
+    display: block;
+
+}
+
+.site-footer .columns .panel a {
+    color: #CCC;
+    text-decoration: none;
+    padding: 0.4em 0;
+}
+.site-footer .info a {
+  text-decoration: none;
+}
+
+.site-footer .columns .panel a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.site-footer .columns .panel span {
+    color: #CCC;
+    padding-left: 0.5em;
+}
+
+.site-footer .columns .panel span:hover {
+    color: #fff;
+  
+}
+
+
+.site-footer .columns .panel a i{
+    color: #CCC;
+    display: inline-block;
+    margin-right: 0.5em;
+
+}
+
+.site-footer .info {
+
+    padding-top: 2em;
+    border-top: 1px solid #9d9999;
+}
+
+.site-footer .info ul {
+    display: flex;
+    padding: 0;
+}
+
+.site-footer .info ul li,
+.site-footer .info ul a {
+    display: block;
+}
+
+.site-footer .info li:not(:last-child) {
+    padding: 0 1em 0 0;
+}
+
+
+.site-footer .info a {
+    color: #ddd;
+    text-decoration: none;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.7);
+ 
+    line-height: 1.2;
+}
+
+.site-footer .info a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+
+}
+.site-footer .columns .panel a i.fab.fa-twitter {
+    margin-right: 0.2em;
+}
+
+h6, .h6 {
+    font-size: 1rem;
+}
+
+
+@media (min-width: 600px) {
+    .site-footer .columns {
+        display: flex;
+        gap: 4em;
+    }
+
+    .site-footer .info {
+        display: flex;
+        justify-content: space-between;
+    }
+}
