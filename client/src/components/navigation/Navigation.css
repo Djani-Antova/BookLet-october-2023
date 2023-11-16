@@ -12,7 +12,7 @@ header .container {
 
 header nav {
     margin-left: auto;
-    padding-top: 0.2em;
+    padding-top: 0.6em;
 }
 
 header nav ul {
@@ -30,6 +30,20 @@ header nav a {
     text-align: center;
     transition: all 0.3s;
 }
+
+.navbar-brand {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+#login{
+    margin-left: 170px;
+}
+
+header img {
+    width: 80px; /* Adjust the width to your preference */
+    height: auto; /* Maintain the aspect ratio */
+  }
 
 button {
     width: 48px;
@@ -49,6 +63,10 @@ button {
   
   header button:hover {
     color: #4a6873;  
+  }
+  header nav a:hover {
+    color: #76b1f1;
+    /* border-bottom: 2px solid red; */
   }
   
   
