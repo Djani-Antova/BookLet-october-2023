@@ -1,3 +1,12 @@
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+.section-container {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 .site-footer {
     background: #4a6873;
@@ -5,7 +14,7 @@
 }
 
 .site-footer .section-container {
-    padding: 4em 1em;
+   
     border-top: 1px solid #9d9999;
 }
 
@@ -20,6 +29,7 @@
 
 .site-footer .newsletter form {
     display: flex;
+    align-items: center;
     padding-top: 1em;
     padding-bottom: 0.5em;
     gap:0.4em
@@ -35,6 +45,7 @@
 
 .site-footer .newsletter input {
     flex: 1 1 60%;
+    padding: 0.6em;
 }
 
 .site-footer .newsletter button  {
@@ -146,6 +157,18 @@ h5, h6 {
 #newsletter-email-footer::placeholder {
     color: #fff;
     opacity: 0.6;
+}
+
+.site-footer .newsletter button.subscribe-button {
+    border-color: #fff;
+    color: #fff;
+    background: #4a6873;
+    flex: 0 1 40%;
+    padding: 4px;
+    margin-bottom: -6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  
 }
 
 
