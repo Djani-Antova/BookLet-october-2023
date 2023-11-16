@@ -19,7 +19,7 @@ const Navigation = () => {
                         <Link to="/books">All Nominations</Link>
                     </li>
                     <li>
-                        <Link to="/books/create">Nominate Book</Link>
+                        <Link to="/create">Nominate Book</Link>
                     </li>
                     <li>
                         <Link to="/latest">Trending</Link>
