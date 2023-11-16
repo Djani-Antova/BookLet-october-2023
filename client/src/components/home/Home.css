@@ -34,10 +34,25 @@
   padding-top: 70px;
 }
 
+.btn1 {
+  background-color: #4a6873;
+  ;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 0;
+}
+
+.btn1:hover {
+  background-color: #007fa4;
+  color: #ffffff;
+  transition: all 0.3s;
+  text-decoration: underline;
+}
+
+
 img {
   vertical-align: middle;
   border-style: none;
-  
 }
 
 h1 {

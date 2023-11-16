@@ -27,6 +27,11 @@ export default function Home() {
                             this journey of literary appreciation and pay tribute to the voices that
                             have inspired, challenged, and moved us over the past ten years.
                         </p>
+                        <div className="btn-box">
+                        <a href="" className="btn1">
+                          Read More
+                        </a>
+                      </div>
                     </div>
                     <div className="col-md-6">
                         <div className="img-box">
