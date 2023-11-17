@@ -15,6 +15,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     border-top: 1px solid #eee;
+    font-size: 0.8em;
 
 }
 header.headers {
@@ -23,12 +24,12 @@ header.headers {
 
 .create-book-modal {
     width: 25rem;
-    position: relative;
-    max-height: 120%;
-    margin: 30px auto;
+    position: relative;   
+    margin: 0 auto;
+    margin-top: 5px;
     border-radius: 20px;
     background-color: white;
-    padding: 1em;
+    padding: 0.7em;
     box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
     z-index: 30;
 
@@ -38,6 +39,7 @@ header.headers {
     color: #4a6873;
     font-size: 1.6em;
     text-align: center;
+    margin-top: 0;
 }
 
 
@@ -49,7 +51,7 @@ header.headers {
 
 .create-book-modal label {
     display: block;
-    margin-top: 8px;
+    margin-top: 3px;
     color: #333;
     background-color: white; 
     padding: 8px; /* Add padding for better visibility */
