@@ -18,9 +18,6 @@
     border-top: 1px solid #9d9999;
 }
 
-.site-footer .columns {
-    padding-bottom: 1em;
-}
 
 .site-footer .columns .newsletter {
     flex: 1 1 30%;
@@ -82,6 +79,10 @@
     text-decoration: none;
     padding: 0.4em 0;
 }
+.site-footer .info {
+    margin-bottom: -20px;
+}
+
 .site-footer .info a {
   text-decoration: none;
 }
@@ -110,8 +111,7 @@
 }
 
 .site-footer .info {
-
-    padding-top: 2em;
+    padding-top: 10px;
     border-top: 1px solid #9d9999;
 }
 
@@ -167,9 +167,49 @@ h5, h6 {
     padding: 4px;
     margin-bottom: -6px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-  
+    border-radius: 4px;  
 }
+
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #4a6873;
+    color: #fff;
+    /* padding: 20px; */
+    text-align: center;
+    border-top: 1px solid #9d9999;
+}
+
+.site-footer .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.socials {
+    text-align: center;
+    padding-top: 5px;
+  }
+  
+  .socials a {
+    font-size: 30px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+    margin-top: -5px;
+  }
+
+  .socials a:hover {
+    opacity: 1;
+    transition: all 0.3s ease 0s;
+  }
+
+
+
 
 
 
