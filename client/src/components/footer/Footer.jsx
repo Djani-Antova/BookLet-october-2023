@@ -1,11 +1,16 @@
 import "./Footer.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
+  const githubUrl = 'https://github.com/Djani-Antova';
+
   return (
     <footer className="site-footer section">
       <div className="container">
         <div className="section-container">
-          <div className="columns">
+
+          {/* <div className="columns">
             <div className="newsletter">
               <h5>BookLet</h5>
               <p>
@@ -95,7 +100,8 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
+          
           <div className="info">
             <p className="copyright">
               2023 ©{" "}
@@ -104,6 +110,13 @@ export default function Footer() {
               </strong>{" "}
               - All rights reserved.
             </p>
+            <ul className="socials">
+              <li>
+                <a href={githubUrl} className="github-page">
+                <FontAwesomeIcon icon={faGithub} style={{ color: '#0088a9' }} />
+                </a>
+              </li>
+            </ul>
             <ul>
               <li>
                 <a href="#">Privacy Policy</a>
