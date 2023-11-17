@@ -14,6 +14,20 @@ export default function FeaturedList() {
           Discover and nominate the finest novels of the past decade.
           </p>
           <h4 className="list-header">Featured Blog Posts</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero, nihil est tenetur quasi sit consectetur officia debitis voluptates magni esse sapiente dolorem! Esse doloribus, ad ex hic omnis illo?</p>
         </header>
         {/* <FeaturedListTable /> */}
       </div>
