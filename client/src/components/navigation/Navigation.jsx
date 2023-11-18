@@ -26,7 +26,7 @@ const Navigation = () => {
                     </li>
                     {/* <!-- Logged-in users --> */}
              {/* <div id="user">
-                        <Link to="/games/create">Nominate Book</Link>
+                        <Link to="/create">Nominate Book</Link>
                         <Link to="/logout">Logout</Link>
             </div> */}
                       {/* <!-- Guest users --> */}
