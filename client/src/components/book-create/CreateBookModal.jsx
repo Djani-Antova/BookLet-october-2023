@@ -27,6 +27,7 @@ export default function CreateBookModal() {
                 <button className="btn close"
                         // onClick={onClose}
                     > X </button>
+                    <img src="/images/vecteezy_trophy-vector-isolated-on-white-background_7063100.jpg" />
                     <h2 className="new-book">Nominate New Book</h2>
 
                     <form onSubmit={createBookSubmitHandler}>
