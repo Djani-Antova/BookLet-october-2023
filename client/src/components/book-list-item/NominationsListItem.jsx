@@ -38,7 +38,7 @@ export default function NominationsListItem ({
             </a>
         </p>
 
-        <div className="actions">
+        {/* <div className="actions">
                 <button className="btn edit-btn" title="Edit">
                     Edit
                 </button>
@@ -48,7 +48,7 @@ export default function NominationsListItem ({
                 <button className="btn info-btn" title="Info" >
                     Details
                 </button>
-        </div>
+        </div> */}
 
 
         </section>
