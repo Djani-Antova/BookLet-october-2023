@@ -60,7 +60,9 @@ export default function NominationsTable() {
                     /> 
             )}
 
-            <button className="btn-add btn" onClick={createBookClickHandler} >Add new book</button>
+
+
+            {/* <button className="btn-add btn" onClick={createBookClickHandler} >Add new book</button> */}
 
             <section className="entries-list">          
                 {books.map((book) => (
