@@ -11,10 +11,15 @@
 .site-footer {
     background: #4a6873;
     color: #fff;
+    padding: 20px 0;
+
+  
+}
+.site-footer.section {
+    padding-top: 0;
 }
 
-.site-footer .section-container {
-   
+.site-footer .section-container {   
     border-top: 1px solid #9d9999;
 }
 
@@ -26,7 +31,7 @@
 
 .site-footer .newsletter form {
     display: flex;
-    align-items: center;
+    align-items:center;
     padding-top: 1em;
     padding-bottom: 0.5em;
     gap:0.4em
