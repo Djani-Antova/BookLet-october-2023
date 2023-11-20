@@ -1,6 +1,6 @@
-import "./Footer.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import "./Footer.css";
 
 export default function Footer() {
   const githubUrl = 'https://github.com/Djani-Antova';
