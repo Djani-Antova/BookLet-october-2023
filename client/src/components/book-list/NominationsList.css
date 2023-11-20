@@ -140,4 +140,20 @@ header.entry-header {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
+.no-books-title h2 {
+    margin-top: 4em;
+    color: white !important;
+    
+}
+
+.nomination-link {
+    color: bisque;
+    font-style: italic;
+}
+.nomination-link:hover {   
+    transition: all 0.3s ease 0s;
+    color: #0088a9;
+
+}
+
 
