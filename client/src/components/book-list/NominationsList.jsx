@@ -1,7 +1,11 @@
-import './NominationsList.css';
-import NominationsListTable from './NominationsListTable.jsx';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import * as bookService from '../../services/bookService.js'
+
+import NominationsListTable from './NominationsListTable.jsx';
+
+import './NominationsList.css';
 
 export default function NominationsList() {
     const[books, setBooks] = useState([])
@@ -15,19 +19,22 @@ export default function NominationsList() {
 
     return (
         <section className="section-blog featured section">
-        <div className="section-container">
-            {/* <header className="section-header">  */}
-             {/* <div className="breadcrumbs">
-                <p>BookLet</p>
-            </div> */}
-            <h2>Stay Informed and Inspired with <br /> <span>BookLet</span> Nominations for this Decade</h2>
-            <h4>
-            Discover and Nominate the Finest Novels 
-            </h4>
-            <h5 className="list-nominations">Nominated Books</h5>
-                 {/* </header> */}
-            <NominationsListTable />
-        </div>
+            <div className="section-container">
+                <h2>Stay Informed and Inspired with <br /> <span>BookLet Award</span> Nominations</h2>
+                <h4>Discover and Nominate the Finest Novels</h4>
+                <h5 className="list-nominations">Nominated Books:</h5>
+
+                {books.length === 0 ? (
+                    <div className="no-books-title">
+                        <h2>
+                            There are no nominations yet.<br/>
+                            Be the first one to make a <Link to='/create' className="nomination-link">nomination</Link>
+                        </h2>
+                    </div>
+                ) : (
+                    <NominationsListTable />
+                )}
+            </div>
         </section>
     );
 }
