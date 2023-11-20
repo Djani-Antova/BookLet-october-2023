@@ -1,6 +1,14 @@
-import "./CreateBookModal.css";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+
 import * as bookService  from '../../services/bookService';
+
+// import {
+//     runSuccessfulBookCreation,
+//     runEmptyTitleInput,
+//     runEmptyDescriptionInput
+// } from "../../utils/alerts";
+
+import "./CreateBookModal.css";
 
 export default function CreateBookModal() {
     const navigate = useNavigate();
@@ -9,11 +17,12 @@ export default function CreateBookModal() {
         e.preventDefault();
 
         const bookData = Object.fromEntries(new FormData(e.currentTarget));
+        // console.log(bookData);
 
         try {
-            await bookService.create(bookData);
-    
-            navigate('/books');            
+            await bookService.create(bookData);    
+            navigate('/books');      
+
         } catch (error) {
             //TODO Error notification => may use f.ex. Toaster message that error occured
             console.log(error);
