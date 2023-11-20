@@ -1,4 +1,4 @@
-// import "./NominationsTable.css";
+// import "./NominationsListTable.css";
 import { useEffect, useState } from "react";
 import * as bookService from "../../services/bookService";
 import NominationsListItem from "../book-list-item/NominationsListItem";
@@ -6,7 +6,7 @@ import CreateBookModal from "../book-create/CreateBookModal";
 // import BookDetailsModal from "./BookDetailsModal";
 
 
-export default function NominationsTable() {
+export default function NominationsListTable() {
     const [books, setBooks] = useState([]);
     const [showCreate, setShowCreate] = useState(false);
     const [showDetails, setShowDetails] = useState(false);
@@ -18,35 +18,35 @@ export default function NominationsTable() {
             .catch(err => console.log(err))     // TODO da dobavim user action, user notification     
     }, []);
 
-    const createBookClickHandler = () => {
-    setShowCreate(true)
-    };
+    // const createBookClickHandler = () => {
+    // setShowCreate(true)
+    // };
 
-    const hideCreateBookModal = () => {
-    setShowCreate(false)
-    };
+    // const hideCreateBookModal = () => {
+    // setShowCreate(false)
+    // };
 
-    const bookCreateHandler = async (e) => {
-        e.preventDefault();
+    // const bookCreateHandler = async (e) => {
+    //     e.preventDefault();
 
-        const data = Object.fromEntries(new FormData(e.target));
-        const newBook = await bookService.create(data);
+    //     const data = Object.fromEntries(new FormData(e.target));
+    //     const newBook = await bookService.create(data);
 
-        setBooks((state) => [...state, newBook])
+    //     setBooks((state) => [...state, newBook])
 
-        setShowCreate(false)
-    }
+    //     setShowCreate(false)
+    // }
 
-    const bookDetailsClickHandler = async (bookId) => {
-        setSelectedBook(bookId);
+    // const bookDetailsClickHandler = async (bookId) => {
+    //     setSelectedBook(bookId);
        
         
-        setShowDetails(true); 
-    };
+    //     setShowDetails(true); 
+    // };
 
     return (
         <div className="table-wrapper">   
-            {showCreate && (
+            {/* {showCreate && (
                 <CreateBookModal 
                     onClose={hideCreateBookModal} 
                     onCreate = {bookCreateHandler}
@@ -58,7 +58,7 @@ export default function NominationsTable() {
                     onClose = {() => setShowDetails(false)} 
                     bookId={selectedBook} 
                     /> 
-            )}
+            )} */}
 
 
 
@@ -75,7 +75,7 @@ export default function NominationsTable() {
                         genre={book.genre}
                         publishedAt={book.publishedAt}
                         desc={book.desc}
-                        onDetailsClick={bookDetailsClickHandler}
+                        // onDetailsClick={bookDetailsClickHandler}
 
                 />            
                 ))}   
