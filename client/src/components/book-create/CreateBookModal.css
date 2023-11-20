@@ -8,7 +8,7 @@
 }
 
 .book-container {
-    margin: 0 auto;
+    margin: 120px auto;
     background-color: #fff;
     padding: 10px;
     border-radius: 8px;
@@ -23,46 +23,60 @@ header.headers {
 }
 
 .create-book-modal {
-    width: 25rem;
-    position: relative;   
-    margin: 0 auto;
-    margin-top: 5px;
-    border-radius: 20px;
-    background-color: white;
-    padding: 0.7em;
+    position: relative; 
+    overflow-y: auto;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
     box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
-    z-index: 30;
+}
 
+.create-book-modal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/favicon.png');
+    background-repeat: repeat;
+    background-size: auto;
+    opacity: 0.3; 
+    z-index: -1; 
 }
 
 .create-book-modal h2 {
     color: #4a6873;
-    font-size: 1.6em;
+    font-size: 1.9em;
     text-align: center;
     margin-top: 0;
+    font-weight: bold;
 }
 
 
 .create-book-modal label {
     display: block;
-    margin-top: 8px;
- 
+    margin-top: 8px; 
 }
 
 .create-book-modal label {
     display: block;
     margin-top: 3px;
     color: #333;
-    background-color: white; 
-    padding: 8px; /* Add padding for better visibility */
+    background-color: bisque; 
+    padding: 8px; 
     font-size: 1.2em;
+    margin-bottom: 7px;
   }
   
 
 .create-book-modal input,
 .create-book-modal textarea {
     width: 100%;
-    padding: 4px;
+    padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -104,9 +118,7 @@ header.headers {
     cursor: pointer;
     padding: 0 14px;
     font-size: 16px;
-    margin-left: 300px;
-
-   
+    margin-left: 300px;   
 }
 
 .btn.close:hover {

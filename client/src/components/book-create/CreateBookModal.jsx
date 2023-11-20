@@ -27,7 +27,7 @@ export default function CreateBookModal() {
                 <button className="btn close"
                         // onClick={onClose}
                     > X </button>
-                    <h2>Nominate New Book</h2>
+                    <h2 className="new-book">Nominate New Book</h2>
 
                     <form onSubmit={createBookSubmitHandler}>
                         <label htmlFor="title">Title:</label>
