@@ -24,7 +24,7 @@ export default function NominationsList() {
             <h4>
             Discover and Nominate the Finest Novels 
             </h4>
-            <h5 className="list-header">Nominated Books</h5>
+            <h5 className="list-nominations">Nominated Books</h5>
                  {/* </header> */}
             <NominationsListTable />
         </div>
