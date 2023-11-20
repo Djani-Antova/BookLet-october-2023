@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import "./Navigation.css"; // Import the CSS file
 import Logo from "/images/booklet-high-resolution-logo-white-transparent.png";
+import "./Navigation.css"; // Import the CSS file
 
 const Navigation = () => {
   // const { user } = UseAuth();
