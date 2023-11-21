@@ -6,6 +6,7 @@ import NominationsList from "./components/book-list/NominationsList";
 import CreateBookModal from "./components/book-create/CreateBookModal";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
+import PageNotFound from "./components/pageNotFound/pageNotFound";
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
           <Route path="/create" element={<CreateBookModal />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="*" element={<PageNotFound />} />
+
         </Routes>
 
         <Footer />
