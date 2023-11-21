@@ -66,17 +66,16 @@ export default function NominationsListTable() {
 
             <section className="entries-list">          
                 {books.map((book) => (
-                    <NominationsListItem
-                        key={book._id}  // Use _id as the key
-                        bookId={book._id}  // Make sure to include bookId prop
-                        title={book.title}
-                        author={book.author}
-                        imageUrl={book.imageUrl}
-                        genre={book.genre}
-                        publishedAt={book.publishedAt}
-                        desc={book.desc}
+                    <NominationsListItem key={book._id} {...book} 
+                        // key={book._id}  // Use _id as the key
+                        // bookId={book._id}  // Make sure to include bookId prop
+                        // title={book.title}
+                        // author={book.author}
+                        // imageUrl={book.imageUrl}
+                        // genre={book.genre}
+                        // publishedAt={book.publishedAt}
+                        // desc={book.desc}
                         // onDetailsClick={bookDetailsClickHandler}
-
                 />            
                 ))}   
             </section>
