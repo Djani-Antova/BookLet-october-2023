@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import './Login.css'
 
 export default function Login() {
@@ -24,7 +26,7 @@ export default function Login() {
                 <input className="submit-btn"  type="submit" value="Log in" />
                 <p className="register-redirect">
                     Don't have an account?
-                    <a href="/register" className="register-link">Sign up</a>
+                    <Link to="/register" className="register-link"> Sign up</Link>
                 </p>
             </form>
         </div>
