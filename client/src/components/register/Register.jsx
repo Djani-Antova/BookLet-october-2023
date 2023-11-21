@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import './Register.css'
 
 export default function Register() {
@@ -64,7 +66,7 @@ export default function Register() {
                     <input className="submit-btn"  type="submit" />
                     <p className="login-redirect">
                         Already have an account?
-                        <a href="/login" className="login-link">Log in</a>
+                        <Link to="/login" className="login-link">Log in</Link>
                     </p>
                 </form>
             </div>            

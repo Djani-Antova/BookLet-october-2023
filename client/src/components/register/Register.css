@@ -17,8 +17,8 @@
 }
 
 .register-title {
-    color: #ffffff;
-    font-size: 1.7em;
+    color: bisque;
+    font-size: 1.9em;
     line-height: 1.75rem;
     font-weight: bold;
     text-align: center;
@@ -27,7 +27,7 @@
 
 .login-title {
     text-align: center;
-    font-size: 25px;
+    font-size: 1.9em;
     font-weight: bolder;
     line-height: 1.75rem;
     padding-top: 0.5rem;
