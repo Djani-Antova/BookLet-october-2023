@@ -8,6 +8,14 @@ export const getAll = async () => {
     return Object.values(result)
 };
 
+export const getOne = async (bookId) => {
+    const result = await request.get(`${baseUrl}/${bookId}`)
+    
+    return result;
+};
+
+
+
 export const create = async (bookData) => {
     const result = await request.post(baseUrl, bookData);
     
