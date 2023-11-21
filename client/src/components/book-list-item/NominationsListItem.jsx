@@ -1,8 +1,11 @@
+import { Link } from 'react-router-dom';
+
 import { formatDate } from "../../utils/dataUtils";
 
 import './NominationsListItem.css';
 
 export default function NominationsListItem ({
+    _id,
     title,
     author,
     imageUrl,
@@ -32,9 +35,9 @@ export default function NominationsListItem ({
             </header>
             <p className="short-desc">{desc}</p>
             <p>
-                <a href="#" className="read-more">
+                <Link to={`/books/${_id}`} className="read-more">
                 Read more
-                </a>
+                </Link>
             </p>
 
             {/* <div className="actions">
