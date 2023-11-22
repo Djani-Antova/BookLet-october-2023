@@ -1,3 +1,4 @@
+
  .wrapper {
    height: 420px;
    width: 854px;
@@ -116,13 +117,17 @@
  }
 
  /* Comments section  */
+ #details-wrapper {
+  margin: 20px auto;
+ }
 
  .details-comments {
    background: #DFF0F1;
    width: 854px;
    margin: 20px auto;
-   border-radius: 16px;
+   border-radius: 16px;   
    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
+   margin-bottom: 20px;
  }
 
  .details-comments h2 {
@@ -146,21 +151,27 @@
 
  .details-comments li {
    display: block;
-   padding: 0.5em 0.5em;
+   padding-bottom: 5px;
+   padding-right: 10px;
+ }
+
+ .details-comments ul {
+  padding-bottom: 5px;
  }
 
  .create-comment {
    margin-top: 60px;
    position: relative;
    text-align: center;
-   width: 700px;
+   max-width: 700px;
    height: auto;
    border-radius: 20px;
-   padding: 40px;
+   padding: 20px;
    box-sizing: border-box;
    background: #60A0A9;
    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
-   margin: 40px auto;
+   margin: 30px auto;
+   border: 1px solid rgb(187, 186, 186);
  }
 
  .create-comment>label {
@@ -184,9 +195,9 @@
   background: bisque;
   font-size: 1.4rem;
   padding-top: 20px;
-  margin-top: 10px;
+  margin-top: 3px;
   color: #181818;
-  padding: 0.9em 1.4em;
+  padding: 0.6em 0.9em;
   border-radius: 60px;
  }
 
@@ -196,4 +207,5 @@
   background-color: rgba(0, 136, 169, 0.8);
   transition: background-color 0.4s ease-in-out;
  } 
+
 
