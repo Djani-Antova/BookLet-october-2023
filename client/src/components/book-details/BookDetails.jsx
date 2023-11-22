@@ -8,10 +8,15 @@ import "./BookDetails.css";
 
 function BookDetails() {
   const [book, setBook] = useState({});
+  const [comments, setComments] = useState([]);
   const { bookId } = useParams();
 
   useEffect(() => {
-    bookService.getOne(bookId).then(setBook);
+    bookService.getOne(bookId)
+        .then(setBook);
+
+    commentService.getAll()    
+        .then(setComments);
   }, [bookId]);
 
   const addComentHandler = async (e) => {
@@ -57,23 +62,16 @@ function BookDetails() {
       <div className="details-comments">
         <h2>Comments:</h2>
         <ul>
-          <li className="comment">
-            <p>Content: I rate this one quite highly.</p>
-          </li>
-          <li className="comment">
-            <p>
-              Content: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              imos similique sapiente?
-            </p>
-          </li>
-          <li className="comment">
-            <p>
-              Content: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              imos similique sapiente?
-            </p>
-          </li>
+            {comments.map(({username, text}) => (
+                <li className="comment">
+                    <p>{username}: {text}</p>
+                </li>
+            ))}   
         </ul>
-        <p className="no-comment">No comments.</p>
+
+        {comments.length === 0 && 
+            <p className="no-comment">No comments.</p>        
+        }
       </div>
 
       <article className="create-comment">
