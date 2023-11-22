@@ -15,7 +15,7 @@ function BookDetails() {
     bookService.getOne(bookId)
         .then(setBook);
 
-    commentService.getAll()    
+    commentService.getAll(bookId)    
         .then(setComments);
   }, [bookId]);
 
