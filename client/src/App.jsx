@@ -1,4 +1,10 @@
-import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+
+import * as authService from "./services/authService";
+import AuthContext from "./contexts/authContext";
+import Path from "./path";
+
 import Navigation from "./components/navigation/Navigation";
 import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
@@ -10,26 +16,38 @@ import BookDetails from "./components/book-details/BookDetails";
 import PageNotFound from "./components/pageNotFound/pageNotFound";
 
 
+
 function App() {
-  return (
-    <div id="box">
-        <Navigation />
+    const navigate = useNavigate()
+    const [auth, setAuth] = useState({});
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/books" element={<NominationsList />} />
-          <Route path="/create" element={<CreateBookModal />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/books/:bookId" element={<BookDetails />} />
+    const loginSubmitHandler = async (values) => {
+        const result = await authService.login(values.email, values.password);
 
-          <Route path="*" element={<PageNotFound />} />
+        setAuth(result);
 
-        </Routes>
+        navigate(Path.Home)
+    }
+    
+    return (
+        <AuthContext.Provider value={{ loginSubmitHandler }}>
+            <div id="box">
+                <Navigation />
 
-        <Footer />
-    </div>
-  );
+                <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/books" element={<NominationsList />} />
+                <Route path="/create" element={<CreateBookModal />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/books/:bookId" element={<BookDetails />} />
+                <Route path="*" element={<PageNotFound />} />
+                </Routes>
+
+                <Footer />
+            </div>
+        </AuthContext.Provider>
+    );
 }
 
 export default App;
