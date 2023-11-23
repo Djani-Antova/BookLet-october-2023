@@ -31,7 +31,7 @@
 
 .img-box img {
   width: 100%;
-  padding-top: 70px;
+  padding-top: 150px;
 }
 
 .btn1 {
@@ -60,13 +60,15 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 15px;
-  color: #ffffff;
+  color: bisque;
+  text-align: center;
 }
 
-p {
+.home-paragraph {
   color: #fefefe;
-  font-size: 1rem;
+  text-align: justify;
+  font-size: 1.3rem;
   font-weight: 400;
   margin-top: 0;
-  margin-bottom: 1rem;
+  /* text-indent: 40px;  */
 }
