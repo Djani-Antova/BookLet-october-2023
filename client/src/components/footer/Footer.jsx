@@ -14,29 +14,23 @@ export default function Footer() {
         <div className="section-container">
           <div className="info">
             <p className="copyright">
-              2023 ©{" "}
+              2023 © {" "}
               <strong>
-                <a href="https://github.com/Djani-Antova">BookLet</a>
+                <a href="https://github.com/Djani-Antova"> BookLet </a>
               </strong>{" "}
-              - All rights reserved.
+               All rights reserved. 
             </p>
-            <ul className="socials">
-              <li>
-                <a href={githubUrl} className="github-page">
-                  <FontAwesomeIcon icon={faGithub} style={{ color: '#0088a9' }} />
-                </a>
-              </li>
-            </ul>
+      
           </div>
           <ul className="footer-links">
             <li>
-              <a href="#">Privacy Policy</a>
+              <a href="/">Privacy Policy</a>
             </li>
             <li>
-              <a href="#">Terms of service</a>
+              <a href="/">Terms of service</a>
             </li>
             <li>
-              <a href="#">Cookie Settings</a>
+              <a href="/">Cookie Settings</a>
             </li>
           </ul>
         </div>
