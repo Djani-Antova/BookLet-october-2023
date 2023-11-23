@@ -3,7 +3,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 
 import * as authService from "./services/authService";
 import AuthContext from "./contexts/authContext";
-import Path from "./path";
+import Path from "./paths";
 
 import Navigation from "./components/navigation/Navigation";
 import Footer from "./components/footer/Footer";

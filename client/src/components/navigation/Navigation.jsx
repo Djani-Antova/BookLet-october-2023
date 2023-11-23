@@ -1,57 +1,55 @@
-import { Link } from 'react-router-dom'
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+
+import AuthContext from '../../contexts/authContext';
 import Logo from "/images/booklet-high-resolution-logo-white-transparent.png";
+
 import "./Navigation.css"; // Import the CSS file
 
 const Navigation = () => {
-  // const { user } = UseAuth();
+    const {
+        isAuthenticated,
+        username
+    } = useContext(AuthContext);
 
-  return (
-    <header>
-        <div className="container">
-            <p>
-                <Link className="navbar-brand" to="/">
-                    <img src={Logo} alt="BookLet Logo" />
-                </Link>
-            </p>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/books">All Nominations</Link>
-                    </li>
-                    <li>
-                        <Link to="/create">Nominate Book</Link>
-                    </li>
-                    <li>
-                        <Link to="/latest">Trending</Link>
-                    </li>
-                    {/* <!-- Logged-in users --> */}
-             {/* <div id="user">
-                        <Link to="/create">Nominate Book</Link>
-                        <Link to="/logout">Logout</Link>
-            </div> */}
-                      {/* <!-- Guest users --> */}
-            {/* <div id="guest"> */}
-                    <li>
-                        <Link className="nav-link" id="login" to="/login">
-                            <i className="fa fa-user" /> Login
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="nav-link" id="register" to="/register">
-                        <i className="fa-solid fa-right-to-bracket"></i> Register
-                        
-                        </Link>
-                    </li>
-            {/* </div> */}
+    return (
+        <header>
+            <div className="container">
+                <p>
+                    <Link className="navbar-brand" to="/">
+                        <img src={Logo} alt="BookLet Logo" />
+                    </Link>
+                </p>
+                <nav>
+                    <ul>
+                            <div id='all'>
+                            <Link to="/books">All Nominations</Link>  
+                            <Link to="/latest">Trending</Link>
+                            <Link to="/about">About</Link>
+                            </div>
 
-                    <button className="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                        <i className="fa fa-search" />
-                    </button>
-                </ul>
-            </nav>
-        </div>
-    </header>
-  );
+                            {isAuthenticated && (
+                            <div id='user'>
+                                <Link to="/create">Nominate Book</Link>                      
+                                <Link className="nav-link" id="logout" to="/logout">Logout, {username}</Link>
+                            </div>
+                            )}   
+
+                            {!isAuthenticated && (
+                                <div id='guest'>
+                                <Link className="nav-link" id="login" to="/login"><i className="fa fa-user" /> Login </Link>                      
+                                <Link className="nav-link" id="register" to="/register"> <i className="fa-solid fa-right-to-bracket"></i> Register   </Link>
+                                </div>
+                            )}                   
+
+                        <button className="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                            <i className="fa fa-search" />
+                        </button>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    );
 };
 
 export default Navigation;

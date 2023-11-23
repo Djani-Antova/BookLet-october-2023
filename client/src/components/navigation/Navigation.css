@@ -68,5 +68,20 @@ button {
     color: #76b1f1;
     /* border-bottom: 2px solid red; */
   }
+  /* #all {
+    margin-right: 120px;
+  } */
+
+  #logout {
+    margin-left: 270px;
+    margin-right: 20px;
+  }
+
+  #login {
+    margin-left: 270px;
+  }
+  #user-name {
+    color: red;
+  }
   
   
