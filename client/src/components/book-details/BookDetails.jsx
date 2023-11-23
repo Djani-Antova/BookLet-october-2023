@@ -72,7 +72,6 @@ function BookDetails() {
         {comments.length === 0 && 
             <p className="no-comment">No comments.</p>        
         }
-      </div>
 
       <article className="create-comment">
         <label>Add new comment:</label>
@@ -82,6 +81,10 @@ function BookDetails() {
           <input className="btn submit" type="submit" value="Add Comment" />
         </form>
       </article>
+
+      </div>
+
+
     </div>
   );
 }
