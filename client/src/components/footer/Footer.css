@@ -85,6 +85,9 @@ footer {
   margin-right: 80px;
 }
 
-a {
+.info .copyright a {
   margin: 0 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(252, 176, 148);
 }
