@@ -15,14 +15,17 @@ html {
 }
 
 body {
-  background-image: url('./images/homeBackgroun.PNG');
-  /* background-attachment: fixed; */
+  background-image: url('./images/homeBackgroun.PNG'); 
   background-size: cover;
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
   background-color: #ffffff;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
 
 body, table, input, button {
   font: inherit;
