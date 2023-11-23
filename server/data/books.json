@@ -5,7 +5,7 @@
         "imageUrl": "https://images.penguinrandomhouse.com/cover/9780525435662",
         "genre": "Drama",
         "publishedAt": "2022-12-18",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magni tenetur, deleniti animi beatae voluptatem a accusantium eum ex? A recusandae molestiae optio labore culpa, soluta pariatur consequuntur quos! Blanditiis!",
+        "desc": "This masterpiece invites readers into the glamorous world of Hollywood's Chateau Marmont. As an enchanting historical account, Levy unveils the captivating tales of celebrities who graced the castle's halls. From scandalous affairs to star-studded parties, the book unveils the hidden narratives behind the iconic establishment. ",
         "_id": "0a825d5e-4bfd-42b5-9149-02aa467f933b"
     },
     "6ebf2d0e-a9e9-4d7d-b531-7320fb2062e5": {        
@@ -14,7 +14,7 @@
         "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/09/Alan_Turing_The_Enigma.jpg",
         "genre": "Mystery",
         "publishedAt": "2022-03-15",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magni tenetur, deleniti animi beatae voluptatem a accusantium eum ex? A recusandae molestiae optio labore culpa, soluta pariatur consequuntur quos! Blanditiis!",
+        "desc": "The book delves into the brilliant mind of the renowned mathematician and codebreaker. Turing's compelling narrative explores the intricacies of cryptography, unraveling the enigma of wartime secrets. Through the lens of history, readers witness Turing's groundbreaking contributions, from deciphering codes to laying the foundation for modern computing.",
         "_id": "6ebf2d0e-a9e9-4d7d-b531-7320fb2062e5"        
         },
     "9df9720c-d952-44f3-a500-aa8f08dd6316": {
@@ -23,7 +23,7 @@
         "imageUrl": "https://m.media-amazon.com/images/I/71DSeMoA+SL._AC_UF894,1000_QL80_.jpg",
         "genre": "Mystery",
         "publishedAt": "2022-06-02",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magni tenetur, deleniti animi beatae voluptatem a accusantium eum ex? A recusandae molestiae optio labore culpa, soluta pariatur consequuntur quos! Blanditiis!",
+        "desc": "The novel immerses readers in a gripping narrative set against the enigmatic backdrop of shadows and intrigue. Russell crafts a compelling tale where the city becomes a character itself, shrouded in mystery. As protagonists navigate through its dimly lit streets, they uncover secrets that blur the line between reality and illusion. ",
         "_id": "9df9720c-d952-44f3-a500-aa8f08dd6316"
     },
     "fefbaf77-04c1-4027-9ef7-58f933417ca4": {
@@ -32,7 +32,7 @@
         "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1637282609i/59651832.jpg",
         "genre": "Romance",
         "publishedAt": "2022-05-20",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magni tenetur, deleniti animi beatae voluptatem a accusantium eum ex? A recusandae molestiae optio labore culpa, soluta pariatur consequuntur quos! Blanditiis!", 
+        "desc": "This is a captivating tale of mystery and intrigue. As the wind carries secrets through a picturesque landscape, the characters embark on a journey of self-discovery, love, and unforeseen challenges. Thompson weaves a narrative that echoes the subtle whispers of fate, keeping readers on the edge of their seats with every turn of the page.", 
         "_id": "fefbaf77-04c1-4027-9ef7-58f933417ca4"
     }
 }
