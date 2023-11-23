@@ -150,13 +150,21 @@ header.entry-header {
 }
 
 .no-books-title h2 {
-    margin-top: 4em;
-    color: white !important;
+    margin-top: 1em;
+    color: #DFF0F1 !important;
+    font-size: 3em;
+    font-style: italic;
+    line-height: 1.9;
 }
 
 .nomination-link {
     color: bisque;
+    font-style: normal;
     font-style: italic;
+    font-weight: 700; 
+    padding: 10px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+   
 }
 
 .nomination-link:hover {

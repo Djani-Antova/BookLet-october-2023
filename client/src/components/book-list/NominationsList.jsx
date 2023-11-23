@@ -27,8 +27,8 @@ export default function NominationsList() {
                 {books.length === 0 ? (
                     <div className="no-books-title">
                         <h2>
-                            There are no nominations yet.<br/>
-                            Be the first one to make a <Link to='/create' className="nomination-link">nomination</Link>
+                            There are no nominations yet. <br/>
+                             <Link to='/create' className="nomination-link">NOMINATE</Link>
                         </h2>
                     </div>
                 ) : (
