@@ -51,6 +51,8 @@
     display: flex;
     gap: 2em;
     align-items: center;
+    justify-content: space-between;
+    margin: 0 5px;
 }
 
 .entry .meta .genre {
