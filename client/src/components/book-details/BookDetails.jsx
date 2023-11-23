@@ -56,7 +56,9 @@ function BookDetails() {
               Delete
             </button>
           </div>
+        
         </div>
+      
       </div>
 
       <div className="details-comments">
