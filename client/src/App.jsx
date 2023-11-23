@@ -43,12 +43,12 @@ function App() {
 
                 <Routes>
                 <Route path={Path.Home} element={<Home />} />
-                <Route path="/books" element={<NominationsList />} />
-                <Route path="/create" element={<CreateBookModal />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/books/:bookId" element={<BookDetails />} />
-                <Route path="*" element={<PageNotFound />} />
+                <Route path={Path.List} element={<NominationsList />} />
+                <Route path={Path.Create} element={<CreateBookModal />} />
+                <Route path={Path.Login} element={<Login />} />
+                <Route path={Path.Register} element={<Register />} />
+                <Route path={Path.Details} element={<BookDetails />} />
+                <Route path={Path.PageNotFound} element={<PageNotFound />} />
                 </Routes>
 
                 <Footer />
