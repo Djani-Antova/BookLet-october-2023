@@ -17,10 +17,13 @@
     max-width: 400px;
     border-top: 1px solid #eee;
     font-size: 0.8em;
+    margin-bottom: calc(40vh - 70px);
 }
+
 
 header.headers {
     background: #fff;
+   
 }
 
 .create-book-modal {
@@ -31,7 +34,7 @@ header.headers {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
 }
 

@@ -1,20 +1,30 @@
+.section-blog.featured.section {
+    height: calc(100% - 60px);
+}
+
+
 .table-wrapper {
     background: #DFF0F1;
     padding: 2em;
     margin-bottom: 10em;
 }
 
- 
- .section-container {
+
+.section-container {
     max-width: 1200px;
     margin: 0 auto;
-  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.section-container h5 {
+    font-size: 3em;
 }
 
 .entry {
     display: flex;
     align-items: center;
-  
 }
 
 .entry .media {
@@ -35,7 +45,6 @@
 .entry .entry-content {
     flex: 1 1 60%;
     padding-left: 1em;
-
 }
 
 .entry .meta {
@@ -49,7 +58,6 @@
     margin-bottom: 0.5em;
     color: #000;
     opacity: 0.8;
-
 }
 
 header.entry-header {
@@ -85,8 +93,8 @@ header.entry-header {
     padding-left: 0.6em;
 }
 
-.section-blog .section-container{
-    padding: 1em 1em;   
+.section-blog .section-container {
+    padding: 1em 1em;
 }
 
 .section-blog .entries-list {
@@ -109,27 +117,28 @@ header.entry-header {
 .section-blog .list-header {
     font-size: 1.8em;
     font-weight: bold;
-    color: bisque;    
+    color: bisque;
 }
 
 .list-nominations {
-    font-size: 1.8em;
+    font-size: 2em;
     font-weight: bold;
-    color: bisque;  
+    color: bisque;
 }
+
 .section-header .breadcrumbs p {
     font-weight: bold;
     color: #4b715a;
-    font-size: 1.4em;    
+    font-size: 1.4em;
 }
 
 .section-blog .section-container h2 {
-    color:bisque;
+    color: bisque;
     font-weight: normal;
 }
 
 .section-blog .section-container h2 span {
-    color:bisque;
+    color: bisque;
     font-weight: bolder;
 }
 
@@ -143,17 +152,14 @@ header.entry-header {
 .no-books-title h2 {
     margin-top: 4em;
     color: white !important;
-    
 }
 
 .nomination-link {
     color: bisque;
     font-style: italic;
 }
-.nomination-link:hover {   
+
+.nomination-link:hover {
     transition: all 0.3s ease 0s;
     color: #0088a9;
-
 }
-
-
