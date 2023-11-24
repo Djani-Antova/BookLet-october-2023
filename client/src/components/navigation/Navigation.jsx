@@ -2,6 +2,8 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import AuthContext from '../../contexts/authContext';
+import Path from '../../paths';
+
 import Logo from "/images/booklet-high-resolution-logo-white-transparent.png";
 
 import "./Navigation.css"; // Import the CSS file
@@ -23,9 +25,9 @@ const Navigation = () => {
                 <nav>
                     <ul>
                             <div id='all'>
-                            <Link to="/books">All Nominations</Link>  
-                            <Link to="/latest">Trending</Link>
-                            <Link to="/about">About</Link>
+                            <Link to={Path.List}>All Nominations</Link>  
+                            <Link to={Path.Latest}>Trending</Link>
+                            <Link to={Path.About}>About</Link>
                             </div>
 
                             {isAuthenticated && (
