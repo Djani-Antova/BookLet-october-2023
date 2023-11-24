@@ -5,6 +5,8 @@ const Path = {
     Login: '/login',
     Register: '/register',
     Details: '/books/:bookId',
+    Latest: '/latest',
+    About: '/about',
     PageNotFound: '*',
 }
 
