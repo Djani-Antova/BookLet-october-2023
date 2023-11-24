@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import * as bookService from "../../services/bookService";
 import * as commentService from "../../services/commentService";
+import AuthContext from "../../contexts/authContext";
 
 import "./BookDetails.css";
 
 function BookDetails() {
+  const {email} = useContext(AuthContext);
   const [book, setBook] = useState({});
   const [comments, setComments] = useState([]);
   const { bookId } = useParams();
@@ -26,10 +28,12 @@ function BookDetails() {
 
     const newComment = await commentService.create(
         bookId,
-        formData.get('username'),
         formData.get('comment')
     );
-        setComments(state => [...state, newComment])
+
+
+
+        setComments(state => [...state, {...newComment, author: {email}}]) //TODO check!
  
   }
 
@@ -64,9 +68,9 @@ function BookDetails() {
       <div className="details-comments">
         <h2>Comments:</h2>
         <ul>
-            {comments.map(({_id, username, text}) => (
+            {comments.map(({_id, text, owner: { email }}) => (
                 <li key={_id} className="comment">
-                    <p>{username}: {text}</p>
+                    <p>{email}: {text}</p>
                 </li>
             ))}   
         </ul>
@@ -78,7 +82,6 @@ function BookDetails() {
       <article className="create-comment">
         <label>Add new comment:</label>
         <form className="form" onSubmit={addComentHandler}>
-          <input type="text" name="username" placeholder="username" />
           <textarea name="comment" placeholder="Comment......"></textarea>
           <input className="btn submit" type="submit" value="Add Comment" />
         </form>

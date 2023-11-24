@@ -5,7 +5,8 @@ const baseUrl = `http://localhost:3030/data/comments`;
 export const getAll = async (bookId) => {
 
     const query = new URLSearchParams({
-        where: `bookId="${bookId}"`
+        where: `bookId="${bookId}"`,
+        load: `owner=_ownerId:users`, 
     });
 
     const result = await request.get(`${baseUrl}?${query}`);
@@ -13,10 +14,9 @@ export const getAll = async (bookId) => {
     return result;
 };
 
-export const create = async (bookId, username, text) => {
+export const create = async (bookId, text) => {
     const newComment = await request.post(baseUrl, {
         bookId,
-        username,
         text
     });
     

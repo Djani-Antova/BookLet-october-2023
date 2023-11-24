@@ -40,7 +40,7 @@ function App() {
     const registerSubmitHandler = async (values) => {
         const result = await authService.register(values.name, values.email, values.username, values.password)
 
-        //TODO here or ?? validation for password and confirmPassword
+        //TODO here or where validation for password and confirmPassword
 
         setAuth(result);
 
