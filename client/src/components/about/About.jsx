@@ -13,18 +13,16 @@ export default function About() {
         <h3 className="how-it-works">How It Works</h3>
         <ol>
           <li>Explore the existing nominations and discussions.</li>
-          <li>Ready to nominate? Simply click on the "Nominate" button.</li>
+          <li>Ready to nominate? Login or register beforehand.</li>
           <li>Fill in the details of the book you are nominating.</li>
           <li>Engage in discussions by commenting on nominations.</li>
-          <li>
-            Respect others' opinions and be part of a vibrant reading community!
-          </li>
+        
         </ol>
         <h3 className="nomination-rules">Nomination Rules</h3>
         <ul>
           <li>Books from all genres are welcome.</li>
           <li>
-            Provide accurate details such as title, author, and a brief
+            Provide accurate details such as title, author, date of publication and a brief
             description.
           </li>
           <li>Ensure your nomination follows the community guidelines.</li>
