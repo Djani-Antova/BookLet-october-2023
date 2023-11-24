@@ -1,0 +1,34 @@
+.about-section {
+    padding: 2em;
+}
+
+h2.about-section-heading {
+    margin-top: -0.2em;
+}
+
+.about-section h3 {
+    color: bisque;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section-heading {
+    border-bottom: 2px solid bisque;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.7em;
+    color: bisque;
+}
+
+.about-section ol,
+.about-section ul {
+    margin-bottom: 0.8em;
+    margin-left: 19px;
+}
+
+.about-section p {
+    line-height: 1.7;
+    font-size: 1.4em;
+}

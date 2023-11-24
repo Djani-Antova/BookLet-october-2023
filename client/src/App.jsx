@@ -14,6 +14,7 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import BookDetails from "./components/book-details/BookDetails";
 import PageNotFound from "./components/pageNotFound/pageNotFound";
+import About from "./components/about/About";
 
 
 
@@ -48,6 +49,7 @@ function App() {
                 <Route path={Path.Login} element={<Login />} />
                 <Route path={Path.Register} element={<Register />} />
                 <Route path={Path.Details} element={<BookDetails />} />
+                <Route path={Path.About} element={<About />} />
                 <Route path={Path.PageNotFound} element={<PageNotFound />} />
                 </Routes>
 
