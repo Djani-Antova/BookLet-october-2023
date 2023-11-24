@@ -30,11 +30,22 @@ function App() {
         navigate(Path.Home)
     };
 
+    const registerSubmitHandler = async (values) => {
+        const result = await authService.register(values.name, values.email, values.username, values.password)
+
+        //TODO here or ?? validation for password and confirmPassword
+
+        setAuth(result);
+
+        navigate(Path.Home);
+    }
+
     const values = {
         loginSubmitHandler,
+        registerSubmitHandler,
         username: auth.username,
         email: auth.email,
-        isAuthenticated: !!auth.username,
+        isAuthenticated: !!auth.accessToken,
     }
     
     return (

@@ -1,8 +1,23 @@
+import { useContext } from "react";
+import AuthContext from "../../contexts/authContext";
 import { Link } from "react-router-dom";
+
+import useForm from "../hooks/useForm";
 
 import './Register.css'
 
 export default function Register() {
+    const { registerSubmitHandler } = useContext(AuthContext);
+    const {values, onChange, onSubmit } = useForm(registerSubmitHandler, {
+        name: '',
+        email: '',
+        username: '',
+        password: '',
+        confirmPassword: ''
+    })
+
+
+
     return (
         <div className="register-body">
 
@@ -11,7 +26,7 @@ export default function Register() {
                     <h1 className="register-title">Sign Up</h1>
                 </div>
 
-                <form >
+                <form onSubmit={onSubmit}>
 
                     <div className="first-name">
                         <label className="first-name-label" htmlFor="fname">Name</label>
@@ -19,7 +34,9 @@ export default function Register() {
                             className="first-name-input"
                             name="name"
                             type="text"
-                            placeholder="First name"                        
+                            placeholder="First name"
+                            onChange={onChange}
+                            value={values.name}                        
                         />
                     </div>
 
@@ -29,7 +46,9 @@ export default function Register() {
                             className="email-input"
                             name="email"
                             type="email"
-                            placeholder="Email"                     
+                            placeholder="Email"  
+                            onChange={onChange} 
+                            value={values.email}                  
                         />
                     </div>
 
@@ -39,7 +58,9 @@ export default function Register() {
                             className="username-input"
                             name="username"
                             type="text"
-                            placeholder="Username"                
+                            placeholder="Username"   
+                            onChange={onChange}  
+                            value={values.username}           
                         />
                     </div>
 
@@ -50,7 +71,8 @@ export default function Register() {
                             name="password"
                             type="password"
                             placeholder="Password"
-                        
+                            onChange={onChange}
+                            value={values.password}                        
                         />
                     </div>
 
@@ -61,6 +83,8 @@ export default function Register() {
                             name="confirmPassword"
                             type="password"
                             placeholder="Confirm Password"
+                            onChange={onChange}
+                            value={values.confirmPassword}
                         />
                     </div>
                     <input className="submit-btn"  type="submit" />

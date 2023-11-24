@@ -11,7 +11,7 @@ import "./Navigation.css"; // Import the CSS file
 const Navigation = () => {
     const {
         isAuthenticated,
-        username
+        username,
     } = useContext(AuthContext);
 
     return (
