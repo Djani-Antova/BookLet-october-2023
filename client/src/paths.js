@@ -7,6 +7,8 @@ const Path = {
     Details: '/books/:bookId',
     Latest: '/latest',
     About: '/about',
+    Logout: '/logout',
+    BookEdit: '/books/:bookId/edit',
     PageNotFound: '*',
 }
 

@@ -15,17 +15,24 @@ import Register from "./components/register/Register";
 import BookDetails from "./components/book-details/BookDetails";
 import PageNotFound from "./components/pageNotFound/pageNotFound";
 import About from "./components/about/About";
+import Logout from "./components/logout/Logout";
 
 
 
 function App() {
     const navigate = useNavigate()
-    const [auth, setAuth] = useState({});
+    const [auth, setAuth] = useState(() => {
+        localStorage.removeItem('accessToken');
+
+        return {};
+    });
 
     const loginSubmitHandler = async (values) => {
         const result = await authService.login(values.email, values.password);
 
         setAuth(result);
+
+        localStorage.setItem('accessToken', result.accessToken);
 
         navigate(Path.Home)
     };
@@ -37,12 +44,20 @@ function App() {
 
         setAuth(result);
 
+        localStorage.setItem('accessToken', result.accessToken);
+
         navigate(Path.Home);
     }
+
+    const logoutHandler = () => {
+        setAuth({});
+        localStorage.removeItem('accessToken');
+     }
 
     const values = {
         loginSubmitHandler,
         registerSubmitHandler,
+        logoutHandler,
         username: auth.username,
         email: auth.email,
         isAuthenticated: !!auth.accessToken,
@@ -61,6 +76,7 @@ function App() {
                 <Route path={Path.Register} element={<Register />} />
                 <Route path={Path.Details} element={<BookDetails />} />
                 <Route path={Path.About} element={<About />} />
+                <Route path={Path.Logout} element={<Logout />} />
                 <Route path={Path.PageNotFound} element={<PageNotFound />} />
                 </Routes>
 
