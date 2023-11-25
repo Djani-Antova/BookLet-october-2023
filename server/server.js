@@ -1339,6 +1339,31 @@
     	}
     };
     var seedData = {
+        books: {
+            "7671dd78-dc78-40fa-9e4e-e84694aa03fc": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Castle on Sunset",
+                author: "Shawn Levy",
+                imageUrl: "https://images.penguinrandomhouse.com/cover/9780525435662",
+                genre: "Drama",
+                publishedAt: "2022-12-18",
+                desc: "This masterpiece invites readers into the glamorous world of Hollywood's Chateau Marmont. As an enchanting historical account, Levy unveils the captivating tales of celebrities who graced the castle's halls. From scandalous affairs to star-studded parties, the book unveils the hidden narratives behind the iconic establishment.",
+                _createdOn: 1700845573939,
+                _id: "7671dd78-dc78-40fa-9e4e-e84694aa03fc"
+            },
+            "785194ce-3c0d-40d8-a099-7cb799cc9ca7": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "The Enigma2",
+                author: "Alan Turing",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/en/0/09/Alan_Turing_The_Enigma.jpg",
+                genre: "Mystery",
+                publishedAt: "2022-03-15",
+                desc: "The book delves into the brilliant mind of the renowned mathematician and codebreaker. Turing's compelling narrative explores the intricacies of cryptography, unraveling the enigma of wartime secrets. Through the lens of history, readers witness Turing's groundbreaking contributions, from deciphering codes to laying the foundation for modern computing.",
+                _createdOn: 1700846773627,
+                _id: "785194ce-3c0d-40d8-a099-7cb799cc9ca7"
+            }
+
+        },
     	recipes: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1393,13 +1418,28 @@
     		}
     	},
     	comments: {
-    		"0a272c58-b7ea-4e09-a000-7ec988248f66": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			content: "Great recipe!",
-    			recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
-    			_createdOn: 1614260681375,
-    			_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
-    		}
+    		// "0a272c58-b7ea-4e09-a000-7ec988248f66": {
+    		// 	_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    		// 	content: "Great recipe!",
+    		// 	recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
+    		// 	_createdOn: 1614260681375,
+    		// 	_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
+    		// },
+            "82f8f5b5-a2f3-4cb6-8471-23a5508c3582": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                bookId: "7671dd78-dc78-40fa-9e4e-e84694aa03fc",
+                text: "Great book!",
+                _createdOn: 1700911348964,
+                _id: "82f8f5b5-a2f3-4cb6-8471-23a5508c3582"
+            },
+            "8a3e857c-034f-405f-b1d3-ad781786010d": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                bookId: "785194ce-3c0d-40d8-a099-7cb799cc9ca7",
+                text: "Stunning!",
+                _createdOn: 1700911467453,
+                _id: "8a3e857c-034f-405f-b1d3-ad781786010d"
+            }
+
     	},
     	records: {
     		i01: {
