@@ -1,8 +1,7 @@
-// Footer.js
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+import Path from '../../paths';
 import './Footer.css';
 
 export default function Footer() {
@@ -16,21 +15,22 @@ export default function Footer() {
             <p className="copyright">
               2023 © {" "}
               <strong>
-                <a href="https://github.com/Djani-Antova"> BookLet </a>
+                <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+                  BookLet
+                </a>
               </strong>{" "}
-               All rights reserved. 
+              All rights reserved.
             </p>
-      
           </div>
           <ul className="footer-links">
             <li>
-              <a href="/">Privacy Policy</a>
+              <Link to={Path.Privacy}>Privacy Policy</Link>
             </li>
             <li>
-              <a href="/">Terms of service</a>
+              <Link to={Path.Terms}>Terms of Service</Link>
             </li>
             <li>
-              <a href="/">Cookie Settings</a>
+              <Link to={Path.Cookies}>Cookie Settings</Link>
             </li>
           </ul>
         </div>
