@@ -16,6 +16,9 @@ import BookDetails from "./components/book-details/BookDetails";
 import PageNotFound from "./components/pageNotFound/pageNotFound";
 import About from "./components/about/About";
 import Logout from "./components/logout/Logout";
+import Privacy from "./components/privacy/Privacy";
+import Terms from "./components/terms/Terms";
+import Cookies from "./components/cookies/Cookies"
 
 
 
@@ -77,6 +80,10 @@ function App() {
                 <Route path={Path.Details} element={<BookDetails />} />
                 <Route path={Path.About} element={<About />} />
                 <Route path={Path.Logout} element={<Logout />} />
+                <Route path={Path.Privacy} element={<Privacy />} />
+                <Route path={Path.Terms} element={<Terms />} />
+                <Route path={Path.Cookies} element={<Cookies />} />
+                
                 <Route path={Path.PageNotFound} element={<PageNotFound />} />
                 </Routes>
 
