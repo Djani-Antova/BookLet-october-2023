@@ -9,6 +9,11 @@ const Path = {
     About: '/about',
     Logout: '/logout',
     BookEdit: '/books/:bookId/edit',
+    Privacy: '/privacy',
+    Terms: '/terms',
+    Cookies: '/cookies',
+
+
     PageNotFound: '*',
 }
 
