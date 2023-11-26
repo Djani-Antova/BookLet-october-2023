@@ -1,0 +1,31 @@
+/* Cookies.css */
+
+.cookies-container {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cookies-section-heading {
+    border-bottom: 2px solid bisque;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.7em;
+    color: bisque;
+  }
+  
+  .cookies-container h3 {
+    color: bisque;
+    margin-top: -0.2em;
+  }
+  
+  .cookies-container p {
+    line-height: 1.7;
+    font-size: 1em;
+  }
+  
+  .cookies-container ol,
+  .cookies-container ul {
+    margin-bottom: 0.8em;
+    margin-left: 19px;
+  }
+  
