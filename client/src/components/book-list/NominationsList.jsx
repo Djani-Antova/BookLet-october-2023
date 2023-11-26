@@ -13,9 +13,12 @@ export default function NominationsList() {
     useEffect(() => {
         bookService.getAll()
             .then(result => setBooks(result))
+            .catch(err => {
+                console.log(err);   //TODO may want to do error handling here, although with seeded data is is not possible
+            })
          
     }, [])
-    // console.log(books);
+
 
     return (
         <section className="section-blog featured section">

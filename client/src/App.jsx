@@ -1,7 +1,5 @@
-import { useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import * as authService from "./services/authService";
 import {AuthProvider}  from "./contexts/authContext";
 import Path from "./paths";
 
@@ -22,52 +20,9 @@ import Cookies from "./components/cookies/Cookies"
 
 
 
-function App() {
-    const navigate = useNavigate()
-    const [auth, setAuth] = useState(() => {
-        localStorage.removeItem('accessToken');
-
-        return {};
-    });
-
-    const loginSubmitHandler = async (values) => {
-        const result = await authService.login(values.email, values.password);
-
-        setAuth(result);
-
-        localStorage.setItem('accessToken', result.accessToken);
-
-        navigate(Path.Home)
-    };
-
-    const registerSubmitHandler = async (values) => {
-        const result = await authService.register(values.name, values.email, values.username, values.password)
-
-        //TODO here or where validation for password and confirmPassword
-
-        setAuth(result);
-
-        localStorage.setItem('accessToken', result.accessToken);
-
-        navigate(Path.Home);
-    }
-
-    const logoutHandler = () => {
-        setAuth({});
-        localStorage.removeItem('accessToken');
-     }
-
-    const values = {
-        loginSubmitHandler,
-        registerSubmitHandler,
-        logoutHandler,
-        username: auth.username,
-        email: auth.email,
-        isAuthenticated: !!auth.accessToken,
-    }
-    
+function App() {    
     return (
-        <AuthProvider value={values}>
+        <AuthProvider>
             <div id="box">
                 <Navigation />
 
