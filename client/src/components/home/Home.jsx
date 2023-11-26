@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+import Path from "../../paths";
 
 import "./Home.css";
 
@@ -26,10 +28,8 @@ export default function Home() {
                             have inspired, challenged, and moved us over the past ten years.
                         </p>
                         <div className="btn-box">
-                        <a href="" className="btn1">
-                          Read More
-                        </a>
-                      </div>
+                            <Link to={Path.About} className="btn1">Read More</Link>
+                        </div>
                     </div>
                     <div className="col-md-6">
                         <div className="img-box">
