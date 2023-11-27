@@ -93,35 +93,36 @@
    
  }
 
- .product-btn button {
+ .product-btn a {
    display: inline-block;
    height: 50px;
    width: 120px;
-   margin-right: 12px;
+   /* margin-right: 12px; */
    box-sizing: border-box;
    border: transparent;
    border-radius: 60px;
    font-family: 'Raleway', sans-serif;
-   font-size: 14px;
+   font-size: 1em;
    font-weight: 500;
-   text-transform: uppercase;
+   /* text-transform: uppercase; */
    letter-spacing: 0.2em;
    cursor: pointer;
    outline: none;
+   text-align: center;
+   padding-top: 15px;
+   text-decoration: none;
+
  }
 
- .product-btn button.edit {
+ .product-btn a.edit,
+ .product-btn a.delete {
    background-color: #60A0A9;
    color: #ffffff;
  }
 
- .product-btn button.delete {
-   background-color: #60A0A9;
-   color: #ffffff;
- }
-
- .product-btn button:hover {
+ .product-btn a:hover {
    background-color: #79b0a1;
+   transition: background-color 0.4s ease-in-out;
  }
 
  /* Comments section  */

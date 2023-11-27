@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 
 import * as bookService from "../../services/bookService";
@@ -6,6 +6,7 @@ import * as commentService from "../../services/commentService";
 import AuthContext from "../../contexts/authContext";
 
 import "./BookDetails.css";
+import Path from "../../paths";
 
 function BookDetails() {
   const { username, userId } = useContext(AuthContext);
@@ -57,12 +58,11 @@ function BookDetails() {
                 {isOwner && (
 
                     <div className="product-btn">
-                        <button className="edit" type="button">
-                        Edit
-                        </button>
-                        <button className="delete" type="button">
-                        Delete
-                        </button>
+                        {/* <button className="edit" type="button">Edit</button>
+                        <button className="delete" type="button"> Delete</button> */}
+
+                        <Link to={Path.BookEdit} className="edit" type="button">Edit</Link>
+                        <Link to={Path.BookDelete} className="delete" type="button"> Delete</Link>
                     </div>
                 )}
 
