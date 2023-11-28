@@ -9,19 +9,17 @@ import "./BookDetails.css";
 import Path from "../../paths";
 
 function BookDetails() {
-  const { username, userId } = useContext(AuthContext);
+  const { username, userId, isAuthenticated } = useContext(AuthContext);
   const [book, setBook] = useState({});
   const [comments, setComments] = useState([]);
-  const [newComment, setNewComment] = useState('');
+  const [newComment, setNewComment] = useState("");
 
   const { bookId } = useParams();
 
   useEffect(() => {
-    bookService.getOne(bookId)
-      .then(setBook);
+    bookService.getOne(bookId).then(setBook);
 
-    commentService.getAll(bookId)
-      .then(setComments);
+    commentService.getAll(bookId).then(setComments);
   }, [bookId]);
 
   const addComentHandler = async (e) => {
@@ -31,12 +29,15 @@ function BookDetails() {
 
     const createdComment = await commentService.create(
       bookId,
-      formData.get('comment')
+      formData.get("comment")
     );
 
-    setComments(state => [...state, { ...createdComment, owner: { username } }]);
-    setNewComment(''); // Reset the new comment state to clear the textarea
-  }
+    setComments((state) => [
+      ...state,
+      { ...createdComment, owner: { username } },
+    ]);
+    setNewComment(""); // Reset the new comment state to clear the textarea
+  };
 
   const isOwner = userId === book._ownerId;
 
@@ -55,17 +56,17 @@ function BookDetails() {
             <p>{book.desc}</p>
           </div>
 
-                {isOwner && (
-
-                    <div className="product-btn">
-                        {/* <button className="edit" type="button">Edit</button>
-                        <button className="delete" type="button"> Delete</button> */}
-
-                        <Link to={Path.BookEdit} className="edit" type="button">Edit</Link>
-                        <Link to={Path.BookDelete} className="delete" type="button"> Delete</Link>
-                    </div>
-                )}
-
+          {isOwner && (
+            <div className="product-btn">
+              <Link to={Path.BookEdit} className="edit" type="button">
+                Edit
+              </Link>
+              <Link to={Path.BookDelete} className="delete" type="button">
+                {" "}
+                Delete
+              </Link>
+            </div>
+          )}
         </div>
       </div>
 
@@ -74,27 +75,29 @@ function BookDetails() {
         <ul>
           {comments.map(({ _id, text, owner: { username } }) => (
             <li key={_id} className="comment">
-              <p>{username}: {text}</p>
+              <p>
+                {username}: {text}
+              </p>
             </li>
           ))}
         </ul>
 
-        {comments.length === 0 &&
-          <p className="no-comment">No comments.</p>
-        }
+        {comments.length === 0 && <p className="no-comment">No comments.</p>}
 
-        <article className="create-comment">
-          <label>Add new comment:</label>
-          <form className="form" onSubmit={addComentHandler}>
-            <textarea
-              name="comment"
-              placeholder="Comment......"
-              value={newComment}
-              onChange={(e) => setNewComment(e.target.value)}
-            ></textarea>
-            <input className="btn submit" type="submit" value="Add Comment" />
-          </form>
-        </article>
+        {isAuthenticated && (
+          <article className="create-comment">
+            <label>Add new comment:</label>
+            <form className="form" onSubmit={addComentHandler}>
+              <textarea
+                name="comment"
+                placeholder="Comment......"
+                value={newComment}
+                onChange={(e) => setNewComment(e.target.value)}
+              ></textarea>
+              <input className="btn submit" type="submit" value="Add Comment" />
+            </form>
+          </article>
+        )}
       </div>
     </div>
   );
