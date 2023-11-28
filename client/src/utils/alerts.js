@@ -46,7 +46,7 @@ export const runSuccessfulBookCreation = () => {
     Swal.fire({
         position: 'top-end',
         icon: 'success',
-        title: 'Post created successfully!',
+        title: 'Book created successfully!',
         showConfirmButton: false,
         timer: 1500
     });
@@ -55,14 +55,43 @@ export const runSuccessfulBookCreation = () => {
 export const runEmptyTitleInput = () => {
     Swal.fire({
         icon: 'error',
-        title: 'Please enter thread title.',
+        title: 'Please enter book title.',
     });
 };
+
+export const runEmptyAuthorInput = () => {
+    Swal.fire({
+        icon: 'error',
+        title: 'Please enter book author.',
+    });
+};
+
+export const runEmptyImageUrlInput = () => {
+    Swal.fire({
+        icon: 'error',
+        title: 'Please enter image url.',
+    });
+};
+
+export const runEmptyGenreInput = () => {
+    Swal.fire({
+        icon: 'error',
+        title: 'Please enter book genre.',
+    });
+};
+
+export const runPublishedAtInput = () => {
+    Swal.fire({
+        icon: 'error',
+        title: 'Please enter book published date.',
+    });
+};
+
 
 export const runEmptyDescriptionInput = () => {
     Swal.fire({
         icon: 'error',
-        title: 'Please enter thread description.',
+        title: 'Please enter book description.',
     });
 };
 
