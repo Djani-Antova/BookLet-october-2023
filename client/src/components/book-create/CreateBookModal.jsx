@@ -1,12 +1,13 @@
-import { useNavigate } from 'react-router-dom';
-
-import * as bookService  from '../../services/bookService';
-
 // import {
 //     runSuccessfulBookCreation,
 //     runEmptyTitleInput,
 //     runEmptyDescriptionInput
 // } from "../../utils/alerts";
+
+import { useNavigate } from 'react-router-dom';
+
+import * as bookService  from '../../services/bookService';
+
 
 import "./CreateBookModal.css";
 
@@ -63,7 +64,7 @@ export default function CreateBookModal() {
                                         </p> */}
 
                         <label htmlFor="publishedAt">Published At:</label>
-                        <input type="text" id="publishedAt" name="publishedAt" />
+                        <input type="text" id="publishedAt" name="publishedAt" placeholder='dd-mm-yyyy' />
                         {/* <p className="form-error">
                                         Published At is not valid!!
                                             </p> */}
