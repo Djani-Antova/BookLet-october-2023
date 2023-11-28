@@ -1,21 +1,56 @@
 import { useContext } from "react";
 import AuthContext from "../../contexts/authContext";
-import { Link } from "react-router-dom";
-
+import { useNavigate, Link } from "react-router-dom";
 import useForm from "../hooks/useForm";
+import {
+    runEmptyNameError, 
+    runEmptyEmailField, 
+    runEmptyUsernameError, 
+    runEmptyPasswordField, 
+    runPasswordLengthError, 
+    runEmptyConfirmPasswordField, 
+    runPasswordEqualityCheck, 
+    runSuccessfulRegistration 
+} from "../../utils/alerts";
 
-import './Register.css'
+
+import './Register.css';
 
 export default function Register() {
     const { registerSubmitHandler } = useContext(AuthContext);
-    const {values, onChange, onSubmit } = useForm(registerSubmitHandler, {
+    const navigate = useNavigate();
+    const { values, onChange, onSubmit } = useForm(async () => {
+        try {
+            if (values.name === '') {
+            return runEmptyNameError();
+            } else if (values.email === '') {
+            return runEmptyEmailField();
+            } else if (values.username === '') {
+            return runEmptyUsernameError();
+            } else if (values.password === '') {
+            return runEmptyPasswordField();
+            } else if (values.password.length < 6) {
+            return runPasswordLengthError();
+            } else if (values.confirmPassword === '') {
+            return runEmptyConfirmPasswordField();
+            } else if (values.password !== values.confirmPassword) {
+            return runPasswordEqualityCheck();
+            }
+
+            await registerSubmitHandler(values);
+            runSuccessfulRegistration();
+            navigate('/');
+        } catch (error) {
+            // TODO Handle registration failure (e.g., display an error message)
+            console.error(error);
+        }
+  }, {
         name: '',
         email: '',
         username: '',
         password: '',
         confirmPassword: ''
-    })
-
+  });
 
 
     return (
