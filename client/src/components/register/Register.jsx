@@ -5,6 +5,7 @@ import useForm from "../hooks/useForm";
 import {
     runEmptyNameError, 
     runEmptyEmailField, 
+    runEmailLengthError,
     runEmptyUsernameError, 
     runEmptyPasswordField, 
     runPasswordLengthError, 
@@ -26,6 +27,8 @@ export default function Register() {
             return runEmptyNameError();
             } else if (values.email === '') {
             return runEmptyEmailField();
+            } else if(values.email.length < 10) {
+            return runEmailLengthError();
             } else if (values.username === '') {
             return runEmptyUsernameError();
             } else if (values.password === '') {
