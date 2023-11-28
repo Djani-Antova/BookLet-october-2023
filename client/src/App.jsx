@@ -17,6 +17,9 @@ import Logout from "./components/logout/Logout";
 import Privacy from "./components/privacy/Privacy";
 import Terms from "./components/terms/Terms";
 import Cookies from "./components/cookies/Cookies"
+import GuestRouteGuard from "./components/routeGuards/GuestRouteGuard";
+
+
 
 
 
@@ -27,19 +30,20 @@ function App() {
                 <Navigation />
 
                 <Routes>
-                <Route path={Path.Home} element={<Home />} />
-                <Route path={Path.List} element={<NominationsList />} />
-                <Route path={Path.Create} element={<CreateBookModal />} />
-                <Route path={Path.Login} element={<Login />} />
-                <Route path={Path.Register} element={<Register />} />
-                <Route path={Path.Details} element={<BookDetails />} />
-                <Route path={Path.About} element={<About />} />
-                <Route path={Path.Logout} element={<Logout />} />
-                <Route path={Path.Privacy} element={<Privacy />} />
-                <Route path={Path.Terms} element={<Terms />} />
-                <Route path={Path.Cookies} element={<Cookies />} />
-                
-                <Route path={Path.PageNotFound} element={<PageNotFound />} />
+                    <Route path={Path.Home} element={<Home />} />
+                    <Route path={Path.List} element={<NominationsList />} />
+                    <Route path={Path.Login} element={<Login />} />
+                    <Route path={Path.Register} element={<Register />} />
+                    <Route path={Path.About} element={<About />} />
+                    <Route path={Path.Privacy} element={<Privacy />} />
+                    <Route path={Path.Terms} element={<Terms />} />
+                    <Route path={Path.Cookies} element={<Cookies />} />
+                    <Route path={Path.Details} element={<BookDetails />} />              
+                    <Route path={Path.Create} element={ <GuestRouteGuard> <CreateBookModal /> </GuestRouteGuard>} />
+                    <Route path={Path.Logout} element={<Logout />} />
+
+                    <Route path={Path.PageNotFound} element={<PageNotFound />} />
+                   
                 </Routes>
 
                 <Footer />
