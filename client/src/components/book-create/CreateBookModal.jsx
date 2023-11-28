@@ -18,7 +18,6 @@ export default function CreateBookModal() {
         e.preventDefault();
 
         const bookData = Object.fromEntries(new FormData(e.currentTarget));
-        // console.log(bookData);
 
         try {
             await bookService.create(bookData);    

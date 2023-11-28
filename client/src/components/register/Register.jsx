@@ -12,6 +12,7 @@ import {
     runPasswordEqualityCheck, 
     runSuccessfulRegistration 
 } from "../../utils/alerts";
+import Path from "../../paths";
 
 
 import './Register.css';
@@ -39,7 +40,7 @@ export default function Register() {
 
             await registerSubmitHandler(values);
             runSuccessfulRegistration();
-            navigate('/');
+            navigate(Path.Home);
         } catch (error) {
             // TODO Handle registration failure (e.g., display an error message)
             console.error(error);
@@ -125,7 +126,7 @@ export default function Register() {
                     <input className="submit-btn"  type="submit" />
                     <p className="login-redirect">
                         Already have an account?
-                        <Link to="/login" className="login-link">Log in</Link>
+                        <Link to={Path.Login} className="login-link">Log in</Link>
                     </p>
                 </form>
             </div>            
