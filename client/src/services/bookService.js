@@ -20,4 +20,12 @@ export const create = async (bookData) => {
     const result = await request.post(baseUrl, bookData);
     
     return result;
-}
+};
+
+export const edit = async (bookId, bookData) => {
+    const result = await request.put(`${baseUrl}/${bookId}`, bookData);
+
+    return result;
+};
+
+export const remove = async (bookId) => request.remove(`${baseUrl}/${bookId}`)
