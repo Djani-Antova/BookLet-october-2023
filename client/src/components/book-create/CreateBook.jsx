@@ -14,9 +14,9 @@ import {
 
 } from '../../utils/alerts';
 
-import './CreateBookModal.css';
+import './CreateBook.css';
 
-export default function CreateBookModal() {
+export default function CreateBook() {
   const navigate = useNavigate();
 
   // State to manage form data
@@ -81,11 +81,15 @@ export default function CreateBookModal() {
     }
   };
 
+  const handleCancel = () => {
+    navigate('/books')
+};
+
   return (
     <div className="create-book-modal">
       <div className="book-container">
         <header className="headers">
-          <button className="btn close">X</button>
+          <button className="btn close" onClick={handleCancel}>X</button>
           <img src="/images/vecteezy_trophy-vector-isolated-on-white-background_7063100.jpg" alt="Book" />
           <h2 className="new-book">Nominate New Book</h2>
 
@@ -112,7 +116,7 @@ export default function CreateBookModal() {
               <button id="action-save" className="btn" type="submit">
                 Save
               </button>
-              <button id="action-cancel" className="btn" type="button" >
+              <button id="action-cancel" className="btn" type="button" onClick={handleCancel}>
                 Cancel
               </button>
             </div>
