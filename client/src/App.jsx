@@ -37,7 +37,7 @@ function App() {
                     <Route path={Path.Terms} element={<Terms />} />
                     <Route path={Path.Cookies} element={<Cookies />} />
                     <Route path={Path.Details} element={<BookDetails />} /> 
-                    <Route path={Path.BookEdit} element={<EditBook />} />            
+                    <Route path={Path.BookEdit} element={ <GuestRouteGuard>  <EditBook /> </GuestRouteGuard>} />            
                     <Route path={Path.Create} element={ <GuestRouteGuard> <CreateBook /> </GuestRouteGuard>} />
                     <Route path={Path.Logout} element={<Logout />} />
 

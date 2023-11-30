@@ -1,6 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import useForm from "../hooks/useForm";
+import { useContext, useState } from "react";
 import AuthContext from "../../contexts/authContext";
 import {
   runEmptyEmailField,
@@ -14,10 +13,18 @@ import "./Login.css";
 export default function Login() {
   const navigate = useNavigate();
   const { loginSubmitHandler } = useContext(AuthContext);
-  const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
+
+  const [values, setValues] = useState({
     email: "",
     password: "",
   });
+
+  const onChange = (e) => {
+    setValues((prevValues) => ({
+      ...prevValues,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
