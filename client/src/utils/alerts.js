@@ -1,4 +1,6 @@
 import Swal from "sweetalert2";
+import 'animate.css';
+
 
 export const runEmptyFieldAlert = () => {
     return Swal.fire({
@@ -17,6 +19,12 @@ export const onLoginSuccess = () => {
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)
             toast.addEventListener('mouseleave', Swal.resumeTimer)
+        },
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
         }
     });
     Toast.fire({
@@ -25,6 +33,7 @@ export const onLoginSuccess = () => {
     });
     return Toast;
 };
+
 
 export const runSaveDeleteDialog = () => {
     Swal.fire({
@@ -48,7 +57,17 @@ export const runSuccessfulBookCreation = () => {
         icon: 'success',
         title: 'Book created successfully!',
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,        
+    });
+};
+
+export const runSuccessfulBookEdition = () => {
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Book edited successfully!',
+        showConfirmButton: false,
+        timer: 1500,        
     });
 };
 
@@ -152,7 +171,10 @@ export const runSuccessfulRegistration = () => {
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)
             toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
+        },
+        customClass: {
+            popup: 'animate__animated animate__fadeIn', // Add the fadeIn animation
+        },
     });
     Toast.fire({
         icon: 'success',
