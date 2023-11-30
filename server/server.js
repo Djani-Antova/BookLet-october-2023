@@ -1361,6 +1361,17 @@
                 desc: "The book delves into the brilliant mind of the renowned mathematician and codebreaker. Turing's compelling narrative explores the intricacies of cryptography, unraveling the enigma of wartime secrets. Through the lens of history, readers witness Turing's groundbreaking contributions, from deciphering codes to laying the foundation for modern computing.",
                 _createdOn: 1700846773627,
                 _id: "785194ce-3c0d-40d8-a099-7cb799cc9ca7"
+            },
+            "ab13e13d-ca39-4f8d-886c-cf0142c8d051": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Whispers in the Wind",
+                author: "Abigail G. Thompson",
+                imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1637282609i/59651832.jpg",
+                genre: "Romance",
+                publishedAt: "2022-05-20",
+                desc: "This is a captivating tale of mystery and intrigue. As the wind carries secrets through a picturesque landscape, the characters embark on a journey of self-discovery, love, and unforeseen challenges. Thompson weaves a narrative that echoes the subtle whispers of fate, keeping readers on the edge of their seats with every turn of the page.",
+                _createdOn: 1701354769542,
+                _id: "ab13e13d-ca39-4f8d-886c-cf0142c8d051"
             }
 
         },
