@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useMemo, useState } from "react";
 
 import * as bookService from "../../services/bookService";
@@ -6,6 +6,8 @@ import * as commentService from "../../services/commentService";
 import AuthContext from "../../contexts/authContext";
 import useForm from "../hooks/useForm";
 import Path from "../../paths";
+import { runSuccessfulBookDeletion } from '../../utils/alerts';
+
 
 import "./BookDetails.css";
 import { pathToUrl } from "../../utils/pathUtils";
@@ -15,6 +17,7 @@ function BookDetails() {
   const [book, setBook] = useState({});
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
+  const navigate = useNavigate();
 
   const { bookId } = useParams();
 
@@ -34,6 +37,17 @@ function BookDetails() {
       { ...createdComment, owner: { username } },
     ]);
     setNewComment(""); // Reset the new comment state to clear the textarea
+  };
+
+  const deleteBookHandler = async () => {
+    try {
+      await bookService.remove(bookId);
+      runSuccessfulBookDeletion();
+      navigate('/books');
+    } catch (error) {
+      console.error("Error deleting book:", error);
+      // Handle deletion error if needed
+    }
   };
 
     //TODO temp solution for form reinitialization
@@ -63,7 +77,7 @@ return (
         {isOwner && (
         <div className="product-btn">
             <Link to={pathToUrl(Path.BookEdit, { bookId })} className="edit" type="button">Edit </Link>
-            <Link to={Path.BookDelete} className="delete" type="button"> Delete </Link>
+            <Link to={Path.BookDelete} className="delete" type="button" onClick={deleteBookHandler}> Delete </Link>
         </div>
         )}
     </div>

@@ -51,6 +51,25 @@ export const runSaveDeleteDialog = () => {
     });
 };
 
+export const runCancelDeleteDialog = () => {
+    Swal.fire({
+        title: 'Do you want to cancel the deletion?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'No, continue deletion',
+        denyButtonText: 'Yes, cancel deletion',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Continue with deletion
+            Swal.fire('Deletion continued!', '', 'success');
+        } else if (result.isDenied) {
+            // Cancel deletion
+            Swal.fire('Deletion canceled', '', 'info');
+        }
+    });
+};
+
+
 export const runSuccessfulBookCreation = () => {
     Swal.fire({
         position: 'top-end',
@@ -66,6 +85,16 @@ export const runSuccessfulBookEdition = () => {
         position: 'top-end',
         icon: 'success',
         title: 'Book edited successfully!',
+        showConfirmButton: false,
+        timer: 1500,        
+    });
+};
+
+export const runSuccessfulBookDeletion = () => {
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Book deleted successfully!',
         showConfirmButton: false,
         timer: 1500,        
     });
