@@ -40,7 +40,7 @@ export default function EditBook() {
   };
 
   const validateForm = () => {
-    // Check for empty title and description
+    // Check for empty input values
     if (book.title === '') {
       runEmptyTitleInput();
       return false;

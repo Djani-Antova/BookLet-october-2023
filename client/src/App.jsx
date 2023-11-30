@@ -19,6 +19,7 @@ import Terms from "./components/terms/Terms";
 import Cookies from "./components/cookies/Cookies"
 import GuestRouteGuard from "./components/routeGuards/GuestRouteGuard";
 import EditBook from "./components/book-edit/EditBook";
+import Latest from "./components/latest/Latest";
 
 
 function App() {    
@@ -37,6 +38,7 @@ function App() {
                     <Route path={Path.Terms} element={<Terms />} />
                     <Route path={Path.Cookies} element={<Cookies />} />
                     <Route path={Path.Details} element={<BookDetails />} /> 
+                    <Route path={Path.Latest} element={<Latest />} /> 
                     <Route path={Path.BookEdit} element={ <GuestRouteGuard>  <EditBook /> </GuestRouteGuard>} />            
                     <Route path={Path.Create} element={ <GuestRouteGuard> <CreateBook /> </GuestRouteGuard>} />
                     <Route path={Path.Logout} element={<Logout />} />

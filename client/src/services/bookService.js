@@ -11,9 +11,19 @@ export const getAll = async () => {
 export const getOne = async (bookId) => {
     const result = await request.get(`${baseUrl}/${bookId}`)
     
-    return result;
+    return result;    
 };
 
+export const getLatest = async() => {
+    const query = new URLSearchParams({
+        // sortBy: `_createdOn desc`,
+        offset: 0,
+        pageSize: 2,
+    });
+
+    const result = await request.get(`${baseUrl}?${query}`);
+    return result;
+}
 
 
 export const create = async (bookData) => {
