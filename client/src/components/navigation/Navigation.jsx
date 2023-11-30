@@ -29,13 +29,14 @@ const Navigation = () => {
                             <Link to={Path.Latest}>Trending</Link>
                             <Link to={Path.About}>About</Link>
                             </div>
-
+                           
                             {isAuthenticated && (
                             <div id='user'>
                                 <Link to="/create">Nominate Book</Link>                      
                                 <Link className="nav-link" id="logout" to="/logout">Logout, {username}</Link>
                             </div>
                             )}   
+                        
 
                             {!isAuthenticated && (
                                 <div id='guest'>

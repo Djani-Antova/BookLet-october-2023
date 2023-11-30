@@ -7,7 +7,7 @@ import Navigation from "./components/navigation/Navigation";
 import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import NominationsList from "./components/book-list/NominationsList";
-import CreateBookModal from "./components/book-create/CreateBookModal";
+import CreateBook from "./components/book-create/CreateBook";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import BookDetails from "./components/book-details/BookDetails";
@@ -18,9 +18,7 @@ import Privacy from "./components/privacy/Privacy";
 import Terms from "./components/terms/Terms";
 import Cookies from "./components/cookies/Cookies"
 import GuestRouteGuard from "./components/routeGuards/GuestRouteGuard";
-
-
-
+import EditBook from "./components/book-edit/EditBook";
 
 
 function App() {    
@@ -38,8 +36,9 @@ function App() {
                     <Route path={Path.Privacy} element={<Privacy />} />
                     <Route path={Path.Terms} element={<Terms />} />
                     <Route path={Path.Cookies} element={<Cookies />} />
-                    <Route path={Path.Details} element={<BookDetails />} />              
-                    <Route path={Path.Create} element={ <GuestRouteGuard> <CreateBookModal /> </GuestRouteGuard>} />
+                    <Route path={Path.Details} element={<BookDetails />} /> 
+                    <Route path={Path.BookEdit} element={<EditBook />} />            
+                    <Route path={Path.Create} element={ <GuestRouteGuard> <CreateBook /> </GuestRouteGuard>} />
                     <Route path={Path.Logout} element={<Logout />} />
 
                     <Route path={Path.PageNotFound} element={<PageNotFound />} />

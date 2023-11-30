@@ -10,6 +10,5 @@ export default function GuestRouteGuard( { children }) {
     if (!isAuthenticated) {
         return <Navigate to={Path.Login} />;
     }
-
     return children
 }
