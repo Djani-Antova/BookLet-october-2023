@@ -1,0 +1,173 @@
+.backdrop {
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.book-container {
+    margin: 0 auto;
+    margin-top: 25px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    border-top: 1px solid #eee;
+    font-size: 0.8em;
+    margin-bottom: calc(40vh - 70px);
+}
+
+
+header.headers {
+    background: #fff;
+    margin: 0 10px
+   
+}
+
+.create-book-modal {
+    position: relative; 
+    overflow-y: auto;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+}
+
+.create-book-modal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/favicon.png');
+    background-repeat: repeat;
+    background-size: auto;
+    opacity: 0.3; 
+    z-index: -1; 
+}
+
+.create-book-modal h2 {
+    color: #4a6873;
+    font-size: 2.6em;
+    text-align: center;
+    margin-top: 0;
+    font-weight: bold;
+    padding-top: 1em;
+    
+}
+
+.book-container .headers img {
+    width: 100px;
+}
+
+
+.create-book-modal label {
+    display: block;
+    margin-top: 4px; 
+}
+
+.create-book-modal label {
+    display: block;
+    margin-top: 3px;
+    color: #333;
+    background-color: bisque; 
+    padding: 4px; 
+    font-size: 1.2em;
+    margin-bottom: 3px;
+    border-radius: 6px;
+    text-align: start;
+    box-shadow: rgba(14, 30, 37, 0.04) 0px 2px 4px 0px, rgba(14, 30, 37, 0.08) 0px 2px 16px 0px;
+  }
+  
+
+.create-book-modal input,
+.create-book-modal textarea {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: rgba(14, 30, 37, 0.04) 0px 2px 4px 0px, rgba(14, 30, 37, 0.08) 0px 2px 16px 0px;
+}
+
+.create-book-modal .modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;   
+}
+
+.create-book-modal .book-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.create-book-modal .book-container img {
+    margin: 0 auto;
+    border: 6px dotted orangered;
+    outline: 4px solid orange;
+    border-radius: 50%;
+}
+
+
+.create-book-modal button {
+    padding: 10px 25px;
+    background-color: #4a6873;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: auto;
+    font-size: 1.6em;
+}
+
+.create-book-modal button:hover {
+    background-color: #007fa4;
+    color: #ffffff;
+    transition: all 0.3s;
+    text-decoration: underline;
+
+}
+
+.btn.close {
+    background: none;
+    border: none;
+    color: #4a6873;
+    cursor: pointer;
+    padding: 0 14px;
+    font-size: 16px;
+    margin-left: 300px;   
+}
+
+.btn.close:hover {
+    color: whitesmoke;
+    background-color: #007fa4;
+    color: #ffffff;
+    transition: all 0.3s;
+    text-decoration: underline;  
+}
+#action-save.btn {
+    margin-left: 20px;
+    
+}
+#action-cancel.btn {
+    margin-right: 20px;
+}
+
+
+@media (width <=930px) {
+    .create-book-modal {
+        width: 45rem;
+        left: calc(50% - 20rem);
+        border-radius: 14px;
+    }
+}
