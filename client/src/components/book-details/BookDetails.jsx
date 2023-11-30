@@ -40,13 +40,12 @@ function BookDetails() {
   };
 
   const deleteBookHandler = async () => {
-    try {
+    const hasConfirmed = confirm(`Are you sure you want to delete ${book.title}`)
+
+    if(hasConfirmed) {
       await bookService.remove(bookId);
       runSuccessfulBookDeletion();
       navigate('/books');
-    } catch (error) {
-      console.error("Error deleting book:", error);
-      // Handle deletion error if needed
     }
   };
 
