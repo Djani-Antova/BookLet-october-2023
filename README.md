@@ -7,7 +7,7 @@ This is a web application built with React for the front-end, serving as a forum
    - npm install - command to install all packages dependances;
    - node server.js - command to start the back-end server;
 3. Navigate to client folder (cd client):
-   - npm install - command for install all install all packages dependances;
+   - npm install - command to install all package dependances;
    - npm run dev - runs the app in development mode;
    - open http://localhost:5173 to view it in the browser.
 4. For convenience, preliminary seeded data comprising books and comments has been provided.
