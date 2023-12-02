@@ -1,5 +1,5 @@
 # BookLet
-This is a web application built with React for the front-end, serving as a forum for users to nominate books for an award prize. The back-end is supported by a SoftUni Practice server, providing the necessary server-side functionalities. The project is developed as part of the SoftUni React educational course.
+This React-based web application serves as a forum for users to nominate books for an award prize. The back-end is supported by the SoftUni Practice server, providing the necessary server-side functionalities. The project is developed as part of the SoftUni React educational course.
 
 ## Steps for local instalation and review:
 1. Clone the repository:  https://github.com/Djani-Antova/BookLet-october-2023
