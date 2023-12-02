@@ -5,7 +5,7 @@ This is a web application built with React for the front-end, serving as a forum
 1. Clone the repository:  https://github.com/Djani-Antova/BookLet-october-2023
 2. Navigate to server folder (cd server):
    - npm install - command to install all packages dependances;
-   - node server.js - command to start the back-en server;
+   - node server.js - command to start the back-end server;
 3. Navigate to client folder(cd client):
    - npm install - command for install all install all packages dependances;
    - npm run dev - runs the app in development mode;
