@@ -6,7 +6,7 @@ import Path from '../../paths';
 
 import Logo from "/images/booklet-high-resolution-logo-white-transparent.png";
 
-import "./Navigation.css"; // Import the CSS file
+import "./Navigation.css"; 
 
 const Navigation = () => {
     const {
@@ -25,15 +25,16 @@ const Navigation = () => {
                 <nav>
                     <ul>
                             <div id='all'>
-                            <Link to={Path.List}>All Nominations</Link>  
-                            <Link to={Path.Latest}>Trending</Link>
-                            <Link to={Path.About}>About</Link>
+                                <Link to={Path.List}>All Nominations</Link>  
+                                <Link to={Path.Latest}>Recent</Link>
+                                <Link to={Path.About}>About</Link>
                             </div>
                            
                             {isAuthenticated && (
                             <div id='user'>
                                 <Link to="/create">Nominate Book</Link>                      
-                                <Link className="nav-link" id="logout" to="/logout">Logout, {username}</Link>
+                                <Link className="nav-link" id="logout" to="/logout">Logout</Link>
+                                <Link className="nav-link" id="account" to="/account"> {username}'s Account</Link>
                             </div>
                             )}   
                         
@@ -45,9 +46,6 @@ const Navigation = () => {
                                 </div>
                             )}                   
 
-                        <button className="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                            <i className="fa fa-search" />
-                        </button>
                     </ul>
                 </nav>
             </div>

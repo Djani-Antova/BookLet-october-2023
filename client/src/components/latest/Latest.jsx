@@ -11,13 +11,13 @@ export default function Latest() {
 
     const [latestBooks, setLatestBooks] = useState([]);
 
-
     useEffect(() => {
         bookService.getLatest()
             .then((result) => setLatestBooks(result))
             .catch(err => console.log(err))     // TODO da dobavim user action, user notification     
     }, []); 
-
+    console.log(latestBooks);
+    
    
     return (
         <section className="section-blog featured section">

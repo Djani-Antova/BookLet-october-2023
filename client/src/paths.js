@@ -10,6 +10,7 @@ const Path = {
     Logout: '/logout',
     BookEdit: '/books/:bookId/edit',
     BookDelete: '/books/:bookId/delete',
+    Account:'/account',
     Privacy: '/privacy',
     Terms: '/terms',
     Cookies: '/cookies',

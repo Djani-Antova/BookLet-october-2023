@@ -29,6 +29,11 @@
     align-items: center;
 }
 
+article {
+ 
+    margin-bottom: 0.3em;
+}
+
 .entry .media {
     flex: 1 1 40%;
     /* aspect-ratio: 1/1; */

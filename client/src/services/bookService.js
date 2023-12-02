@@ -5,23 +5,26 @@ const baseUrl = `http://localhost:3030/data/books`;
 export const getAll = async () => {
     const result = await request.get(baseUrl)
     
-    return result;
+    return result;    
 };
 
+
 export const getOne = async (bookId) => {
-    const result = await request.get(`${baseUrl}/${bookId}`)
+    const result = await request.get(`${baseUrl}/${bookId}`);
     
     return result;    
 };
 
-export const getLatest = async() => {
-    const query = new URLSearchParams({
-        // sortBy: `_createdOn desc`,
-        offset: 0,
-        pageSize: 2,
-    });
+export const getMyBooks = async(userId) => {
+    const result = await request.get(`${baseUrl}?where=_ownerId%3D%22${userId}%22&sortBy=_createdOn%20desc`);
 
-    const result = await request.get(`${baseUrl}?${query}`);
+    return result;
+}
+
+export const getLatest = async() => {
+    const query = '_createdOn desc&offset=0&pageSize=3'; 
+    const result = await request.get(`${baseUrl}?sortBy=${query}`);
+
     return result;
 }
 
