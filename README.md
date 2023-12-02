@@ -3,11 +3,11 @@ This is a web application built with React for the front-end, serving as a forum
 
 ## Steps for local instalation and review:
 1. Clone the repository:  https://github.com/Djani-Antova/BookLet-october-2023
-2. Navigate to server folder (cd server):
-   - npm install - command to install all packages dependances;
-   - node server.js - command to start the back-end server;
-3. Navigate to client folder (cd client):
-   - npm install - command to install all package dependances;
-   - npm run dev - runs the app in development mode;
-   - open http://localhost:5173 to view it in the browser.
+2. Navigate to the server folder (`cd server`):
+   - Run `npm install` to install all package dependencies.
+   - Run `node server.js` to start the back-end server.
+3. Navigate to the client folder (`cd client`):
+   - Run `npm install` to install all package dependencies.
+   - Run `npm run dev` to run the app in development mode.
+   - Open http://localhost:5173 to view it in the browser.
 4. For convenience, preliminary seeded data comprising books and comments has been provided.
