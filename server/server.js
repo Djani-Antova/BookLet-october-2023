@@ -1353,7 +1353,7 @@
             },
             "785194ce-3c0d-40d8-a099-7cb799cc9ca7": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                title: "The Enigma2",
+                title: "The Enigma",
                 author: "Alan Turing",
                 imageUrl: "https://upload.wikimedia.org/wikipedia/en/0/09/Alan_Turing_The_Enigma.jpg",
                 genre: "Mystery",
@@ -1372,7 +1372,62 @@
                 desc: "This is a captivating tale of mystery and intrigue. As the wind carries secrets through a picturesque landscape, the characters embark on a journey of self-discovery, love, and unforeseen challenges. Thompson weaves a narrative that echoes the subtle whispers of fate, keeping readers on the edge of their seats with every turn of the page.",
                 _createdOn: 1701354769542,
                 _id: "ab13e13d-ca39-4f8d-886c-cf0142c8d051"
-            }
+            },
+            "e9e6bacc-27a0-444c-a7d2-f7de7e8728bf": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "The City of Shadows",
+                author: "Michael Russell",
+                imageUrl: "https://m.media-amazon.com/images/I/71DSeMoA+SL._AC_UF894,1000_QL80_.jpg",
+                genre: "Mystery",
+                publishedAt: "2022-06-02",
+                desc: "The novel immerses readers in a gripping narrative set against the enigmatic backdrop of shadows and intrigue. Russell crafts a compelling tale where the city becomes a character itself, shrouded in mystery. As protagonists navigate through its dimly lit streets, they uncover secrets that blur the line between reality and illusion.",
+                _createdOn: 1701541257793,
+                _id: "e9e6bacc-27a0-444c-a7d2-f7de7e8728bf"
+            },
+            "1114f0c7-1470-48d5-b055-a3d7d0fea34c": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "The Black Book",
+                author: "Ian Rankin",
+                imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388265738i/77489.jpg",
+                genre: "Thriller",
+                publishedAt: "2022-07-10",
+                desc: "When a close colleague is brutally attacked, DI John Rebus is drawn into a case involving an unidentified body and murder. Pursued by dangerous ghosts and tormented by the coded secrets of his colleague's notebook, Rebus must piece together a jigsaw no one wants completed.",
+                _createdOn: 1701541709971,
+                _id: "1114f0c7-1470-48d5-b055-a3d7d0fea34c"
+            },
+            "70ab95c2-7a6f-400d-b081-35256def1d0f": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "The Mermaids Singing",
+                author: "Val McDermid",
+                imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1389270695i/459386.jpg",
+                genre: "Mystery",
+                publishedAt: "12-05-2022",
+                desc: "This book, unbelievably, had been on my to-be-read shelf for almost 4 years. I’ve decided I’m going to be reading mostly books off my personal list this year, and this was a very easy first pick.",
+                _createdOn: 1701541866677,
+                _id: "70ab95c2-7a6f-400d-b081-35256def1d0f"
+            },
+            "3ca6cd0f-3e75-4891-b1ba-bcb43f64b790": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "The Maid's Diary",
+                author: "Loreth Anne White",
+                imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1647551429i/60588456.jpg",
+                genre: "Fiction",
+                publishedAt: "02-03-2021",
+                desc: "Kit Darling is a maid with a snooping problem. She’s the “invisible girl,” compelled to poke into her wealthy clients’ closely guarded lives. It’s a harmless hobby until Kit sees something she can’t unsee in the home of her brand-new clients",
+                _createdOn: 1701541968012,
+                _id: "3ca6cd0f-3e75-4891-b1ba-bcb43f64b790"
+            },
+            "e19f9241-2fff-48cb-9d23-ddfb8a00f2c2": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "The Last Remains",
+                author: "Elly Griffiths",
+                imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1678220301i/61825042.jpg",
+                genre: "Fiction",
+                publishedAt: "10-09-2023",
+                desc: "When builders discover a human skeleton while renovating a café, they call in archaeologist Dr. Ruth Galloway, who is preoccupied with the threatened closure of her department and by her ever-complicated relationship with DCI Nelson.",
+                _createdOn: 1701542082181,
+                _id: "e19f9241-2fff-48cb-9d23-ddfb8a00f2c2"
+            }       
 
         },
     	recipes: {
@@ -1429,13 +1484,6 @@
     		}
     	},
     	comments: {
-    		// "0a272c58-b7ea-4e09-a000-7ec988248f66": {
-    		// 	_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    		// 	content: "Great recipe!",
-    		// 	recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
-    		// 	_createdOn: 1614260681375,
-    		// 	_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
-    		// },
             "82f8f5b5-a2f3-4cb6-8471-23a5508c3582": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 bookId: "7671dd78-dc78-40fa-9e4e-e84694aa03fc",
@@ -1449,7 +1497,23 @@
                 text: "Stunning!",
                 _createdOn: 1700911467453,
                 _id: "8a3e857c-034f-405f-b1d3-ad781786010d"
+            },
+            "abfe1e4b-c9c4-48a8-a09a-ed1417556603": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                bookId: "1114f0c7-1470-48d5-b055-a3d7d0fea34c",
+                text: "One of the best thrillers this decade",
+                _createdOn: 1701541745302,
+                _id: "abfe1e4b-c9c4-48a8-a09a-ed1417556603"
+            },
+            "bd52a636-72ec-4a62-abe1-8a363fbc63db" :{
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                bookId: "e19f9241-2fff-48cb-9d23-ddfb8a00f2c2",
+                text: "What a bittersweet experience to read.",
+                _createdOn: 1701542118393,
+                _id: "bd52a636-72ec-4a62-abe1-8a363fbc63db"
             }
+
+
 
     	},
     	records: {
