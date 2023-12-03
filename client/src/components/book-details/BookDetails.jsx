@@ -1,25 +1,42 @@
 import { useState, useEffect, useContext } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
+
 import * as bookService from "../../services/bookService";
 import * as commentService from "../../services/commentService";
+
 import AuthContext from "../../contexts/authContext";
 import Path from "../../paths";
 import { runSuccessfulBookDeletion, runEmptyFieldAlert } from '../../utils/alerts';
-import "./BookDetails.css";
 import { pathToUrl } from "../../utils/pathUtils";
+
+import "./BookDetails.css";
 
 function BookDetails() {
   const { username, userId, isAuthenticated } = useContext(AuthContext);
   const [book, setBook] = useState({});
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const { bookId } = useParams();
 
   useEffect(() => {
-    bookService.getOne(bookId).then(setBook);
-    commentService.getAll(bookId).then(setComments);
+    const fetchData = async () => {
+      try {
+        const bookData = await bookService.getOne(bookId);
+        const commentsData = await commentService.getAll(bookId);
+
+        setBook(bookData);
+        setComments(commentsData);
+        setError(null); // Clear any previous errors
+      } catch (error) {
+        console.error("Error fetching book details or comments:", error);
+        setError('Error fetching book details or comments. Please try again later.');
+      }
+    };
+
+    fetchData();
   }, [bookId]);
 
   const addCommentHandler = async (e) => {
@@ -31,14 +48,19 @@ function BookDetails() {
       return;
     }
 
-    const createdComment = await commentService.create(bookId, newComment);
+    try {
+      const createdComment = await commentService.create(bookId, newComment);
 
-    setComments((state) => [
-      ...state,
-      { ...createdComment, owner: { username } },
-    ]);
+      setComments((state) => [
+        ...state,
+        { ...createdComment, owner: { username } },
+      ]);
 
-    setNewComment(""); // Reset the new comment state to clear the textarea
+      setNewComment(""); // Reset the new comment state to clear the textarea
+    } catch (error) {
+      console.error("Error adding comment:", error);
+      setError('Error adding comment. Please try again later.');
+    }
   };
 
   const deleteBookHandler = async (e) => {
@@ -47,9 +69,14 @@ function BookDetails() {
     const hasConfirmed = window.confirm(`Are you sure you want to delete ${book.title}`);
 
     if (hasConfirmed) {
-      await bookService.remove(bookId);
-      runSuccessfulBookDeletion();
-      navigate('/books');
+      try {
+        await bookService.remove(bookId);
+        runSuccessfulBookDeletion();
+        navigate('/books');
+      } catch (error) {
+        console.error("Error deleting book:", error);
+        setError('Error deleting. Please try again later.');
+      }
     } else {
       navigate('/books');
     }
@@ -113,6 +140,13 @@ function BookDetails() {
             </form>
           </article>
         )}
+        
+        {error && (
+          <div className="error-message" style={{ color: 'red', fontSize: '2em' }}>
+            {error}
+          </div>
+        )}
+
       </div>
     </div>
   );
