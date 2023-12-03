@@ -179,5 +179,8 @@ header.entry-header {
    content: "";
    flex: 1 1 calc(50% - 1em);  
 }
+.error-message {
+    border: 4px solid red;
+}
       
    

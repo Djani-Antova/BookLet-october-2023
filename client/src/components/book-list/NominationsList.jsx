@@ -1,24 +1,10 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
-import * as bookService from '../../services/bookService.js'
-
 import NominationsListTable from './NominationsListTable.jsx';
-
+import { useBookData } from "../hooks/useBookData";
 import './NominationsList.css';
 
 export default function NominationsList() {
-    const[books, setBooks] = useState([])
-
-    useEffect(() => {
-        bookService.getAll()
-            .then(result => setBooks(result))
-            .catch(err => {
-                console.log(err);   //TODO may want to do error handling here, although with seeded data is is not possible
-            })
-         
-    }, [])
-
+    const { books, error } = useBookData(); // Use the custom hook
 
     return (
         <section className="section-blog featured section">
@@ -27,15 +13,23 @@ export default function NominationsList() {
                 <h4>Discover and Nominate the Finest Novels</h4>
                 <h5 className="list-nominations">Nominated Books:</h5>
 
-                {books.length === 0 ? (
-                    <div className="no-books-title">
-                        <h2>
-                            There are no nominations yet. <br/>
-                             <Link to='/create' className="nomination-link">NOMINATE</Link>
-                        </h2>
+                {error ? (
+                    <div className="error-message" style={{ color: 'red' }}>
+                        <h2>{error}</h2>
                     </div>
                 ) : (
-                    <NominationsListTable />
+                    <>
+                        {books.length === 0 ? (
+                            <div className="no-books-title">
+                                <h2>
+                                    There are no nominations yet. <br/>
+                                    <Link to='/create' className="nomination-link">NOMINATE</Link>
+                                </h2>
+                            </div>
+                        ) : (
+                            <NominationsListTable />
+                        )}
+                    </>
                 )}
             </div>
         </section>
