@@ -46,7 +46,6 @@ p.genre {
   margin-right: 0px;
 }
 
-
 .product-text h2 {
   margin: 0 0 10px 26px;
   font-size: 14px;
@@ -78,7 +77,6 @@ p.genre {
   overflow: hidden;
 }
 
-
 .product-btn {
   height: 40px;
   width: 527px;
@@ -91,7 +89,8 @@ p.genre {
 
 }
 
-.product-btn a {
+.product-btn a,
+.product-btn button {
   display: inline-block;
   height: 50px;
   width: 120px;
@@ -105,18 +104,25 @@ p.genre {
   cursor: pointer;
   outline: none;
   text-align: center;
-  padding-top: 15px;
   text-decoration: none;
+}
 
+.product-btn a {
+  padding-top: 15px;
+}
+
+.product-btn button {
+  margin-top: 1px;
 }
 
 .product-btn a.edit,
-.product-btn a.delete {
+.product-btn button.delete {
   background-color: #60A0A9;
   color: #ffffff;
 }
 
-.product-btn a:hover {
+.product-btn a:hover,
+.product-btn button:hover  {
   background-color: #79b0a1;
   transition: background-color 0.4s ease-in-out;
 }
@@ -203,17 +209,25 @@ p.no-comment {
   border-radius: 10px;
 }
 
-input.btn.submit {
+.btn.submit {
   background: bisque;
   font-size: 1rem;
-  padding-top: 20px;
+  padding-top: 30px;
   margin-top: 3px;
-  color: #181818;
-  padding: 0.6em 0.9em;
-  border-radius: 50px;
+  color: #868686;
+  padding: 1em 5em;
+  border-radius: 20px; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size:x-large;
+  font-weight: 800;
 }
 
-input.btn.submit:hover {
+
+.btn.submit:hover {
   color: white;
   cursor: pointer;
   background-color: rgba(0, 136, 169, 0.8);
