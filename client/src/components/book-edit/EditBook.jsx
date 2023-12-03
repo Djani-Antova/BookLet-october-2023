@@ -24,6 +24,7 @@ export default function EditBook() {
     publishedAt: '',
     desc: '',
   });
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     bookService.getOne(bookId).then((result) => {
@@ -84,9 +85,9 @@ export default function EditBook() {
       await bookService.edit(bookId, book);
       runSuccessfulBookEdition();
       navigate('/books');
-    } catch (error) {
-      // TODO: Handle errors
-      console.error(error);
+    } catch (error) {    
+      console.error("Error editing book:", error);
+      setError('Error editing book. Please try again later.');
     }
   };
 
@@ -106,6 +107,12 @@ export default function EditBook() {
             alt="Book"
           />
           <h2 className="new-book">Edit Nominated Book</h2>
+
+          {error && (
+            <div className="error-message" style={{ color: 'red', fontSize: '2em' }}>
+              {error}
+            </div>
+          )}
 
           <form onSubmit={handleSubmit}>
             <label htmlFor="title">Title:</label>
