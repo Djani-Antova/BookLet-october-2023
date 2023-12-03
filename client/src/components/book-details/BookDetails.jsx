@@ -17,7 +17,7 @@ function BookDetails() {
   const [book, setBook] = useState({});
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   const { bookId } = useParams();
 
@@ -46,14 +46,18 @@ function BookDetails() {
     setNewComment(""); // Reset the new comment state to clear the textarea
   };
 
-    const deleteBookHandler = async () => {
+    const deleteBookHandler = async (e) => {
+        e.preventDefault(); // Prevent the default link behavior
+        
         const hasConfirmed = confirm(`Are you sure you want to delete ${book.title}`)
 
-    if(hasConfirmed) {
-        await bookService.remove(bookId);
-        runSuccessfulBookDeletion();
-        navigate('/books');
-    }
+        if(hasConfirmed) {
+            await bookService.remove(bookId);
+            runSuccessfulBookDeletion();
+            navigate('/books');
+        } else {
+            navigate('/books');
+        }
   };
 
     //TODO temp solution for form reinitialization

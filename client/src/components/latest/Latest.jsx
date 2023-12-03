@@ -23,8 +23,7 @@ export default function Latest() {
         
             <section className="section-blog featured section">
                 <div className="section-container">
-                    <h2>Latest  Nominations For <br /> <span>BookLet Award</span> </h2>
-                
+                    <h2>Latest Three Nominations For <br /> <span>BookLet Award</span> </h2>                
 
                     {latestBooks.map(book => <LatestBook key={book._id} {...book} />)}
                 
