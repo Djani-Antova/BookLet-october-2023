@@ -6,7 +6,7 @@ import * as commentService from "../../services/commentService";
 import AuthContext from "../../contexts/authContext";
 import useForm from "../hooks/useForm";
 import Path from "../../paths";
-import { runSuccessfulBookDeletion } from '../../utils/alerts';
+import { runSuccessfulBookDeletion, runEmptyFieldAlert } from '../../utils/alerts';
 
 
 import "./BookDetails.css";
@@ -27,92 +27,99 @@ function BookDetails() {
   }, [bookId]);
 
   const addComentHandler = async (values) => {
+    // Check if the comment is empty
+    if (!values.comment.trim()) {
+        runEmptyFieldAlert();
+        return;
+    }
+  
     const createdComment = await commentService.create(
-      bookId,
-      values.comment
+        bookId,
+        values.comment
     );
-
+  
     setComments((state) => [
-      ...state,
-      { ...createdComment, owner: { username } },
+        ...state,
+        { ...createdComment, owner: { username } },
     ]);
+
     setNewComment(""); // Reset the new comment state to clear the textarea
   };
 
-  const deleteBookHandler = async () => {
-    const hasConfirmed = confirm(`Are you sure you want to delete ${book.title}`)
+    const deleteBookHandler = async () => {
+        const hasConfirmed = confirm(`Are you sure you want to delete ${book.title}`)
 
     if(hasConfirmed) {
-      await bookService.remove(bookId);
-      runSuccessfulBookDeletion();
-      navigate('/books');
+        await bookService.remove(bookId);
+        runSuccessfulBookDeletion();
+        navigate('/books');
     }
   };
 
     //TODO temp solution for form reinitialization
-  const initialValues = useMemo(() => ({
+    const initialValues = useMemo(() => ({
     comment: "",
-  }), [])
+    }), [])
 
   const { values, onChange, onSubmit } = useForm(addComentHandler, initialValues);
 
   const isOwner = userId === book._ownerId;
 
-return (
-    <div id="details-wrapper">
-    <div className="wrapper">
-    <div className="product-img">
-        <img src={book.imageUrl} height={420} width={327} alt={book.title} />
-    </div>
-    <div className="product-info">
-        <div className="product-text">
-        <h1>{book.title}</h1>
-        <h2>By: {book.author}</h2>
-        <h5>Genre: {book.genre}</h5>
-        <h6>Published at: {book.publishedAt}</h6>
-        <p>{book.desc}</p>
+    return (
+        <div id="details-wrapper">
+        <div className="wrapper">
+        <div className="product-img">
+            <img src={book.imageUrl} height={420} width={327} alt={book.title} />
+        </div>
+        <div className="product-info">
+            <div className="product-text">
+            <h1>{book.title}</h1>
+            <h2>By: {book.author}</h2>
+            <h5>Genre: {book.genre}</h5>
+            <h6>Published at: {book.publishedAt}</h6>
+            <p>{book.desc}</p>
+            </div>
+
+            {isOwner && (
+            <div className="product-btn">
+                <Link to={pathToUrl(Path.BookEdit, { bookId })} className="edit" type="button">Edit </Link>
+                <Link to={Path.BookDelete} className="delete" type="button" onClick={deleteBookHandler}> Delete </Link>
+            </div>
+            )}
+        </div>
         </div>
 
-        {isOwner && (
-        <div className="product-btn">
-            <Link to={pathToUrl(Path.BookEdit, { bookId })} className="edit" type="button">Edit </Link>
-            <Link to={Path.BookDelete} className="delete" type="button" onClick={deleteBookHandler}> Delete </Link>
-        </div>
+        <div className="details-comments">
+        <h2>Comments:</h2>
+        <ul>
+            {comments.map(({ _id, text, owner: { username } }) => (
+            <li key={_id} className="comment">
+                <p>
+                {username}: {text}
+                </p>
+            </li>
+            ))}
+        </ul>
+
+        {comments.length === 0 && <p className="no-comment">No comments.</p>}
+
+        {isAuthenticated && (
+            <article className="create-comment">
+            <label>Add new comment:</label>
+            <form className="form" onSubmit={onSubmit}>
+                <textarea
+                name="comment"
+                placeholder="Comment......"
+                value={values.comment}
+                onChange={onChange}
+                ></textarea>
+                <input className="btn submit" type="submit" value="Add Comment" />
+            </form>
+            </article>
         )}
-    </div>
-    </div>
-
-    <div className="details-comments">
-    <h2>Comments:</h2>
-    <ul>
-        {comments.map(({ _id, text, owner: { username } }) => (
-        <li key={_id} className="comment">
-            <p>
-            {username}: {text}
-            </p>
-        </li>
-        ))}
-    </ul>
-
-    {comments.length === 0 && <p className="no-comment">No comments.</p>}
-
-    {isAuthenticated && (
-        <article className="create-comment">
-        <label>Add new comment:</label>
-        <form className="form" onSubmit={onSubmit}>
-            <textarea
-            name="comment"
-            placeholder="Comment......"
-            value={values.comment}
-            onChange={onChange}
-            ></textarea>
-            <input className="btn submit" type="submit" value="Add Comment" />
-        </form>
-        </article>
-    )}
-    </div>
-    </div>
-);
+        </div>
+        </div>
+    );
 }
 
 export default BookDetails;

@@ -30,29 +30,13 @@ export default function NominationsListItem ({
                     </div>
                     <p className="genre">{genre}</p>
                 </div>
-            <header className="entry-header">
-                <h4>{title}</h4>
-            </header>
-            <p className="short-desc">{desc}</p>
-            <p>
-                <Link to={`/books/${_id}`} className="read-more">
-                Read more
-                </Link>
-            </p>
-
-            {/* <div className="actions">
-                    <button className="btn edit-btn" title="Edit">
-                        Edit
-                    </button>
-                    <button className="btn delete-btn" title="Delete" >
-                        Delete
-                    </button>
-                    <button className="btn info-btn" title="Info" >
-                        Details
-                    </button>
-            </div> */}
-
-
+                <header className="entry-header">
+                    <h4>{title}</h4>
+                </header>
+                <p className="short-desc">{desc}</p>
+                <p>
+                    <Link to={`/books/${_id}`} className="read-more">Read more</Link>
+                </p>
             </section>
         </article>
 );
