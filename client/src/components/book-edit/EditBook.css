@@ -23,8 +23,7 @@
 
 header.headers {
     background: #fff;
-    margin: 0 10px
-   
+    margin: 0 10px   
 }
 
 .create-book-modal {
@@ -163,11 +162,3 @@ header.headers {
     margin-right: 20px;
 }
 
-
-@media (width <=930px) {
-    .create-book-modal {
-        width: 45rem;
-        left: calc(50% - 20rem);
-        border-radius: 14px;
-    }
-}
