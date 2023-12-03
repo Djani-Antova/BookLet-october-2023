@@ -20,16 +20,18 @@ export default function Latest() {
     
    
     return (
-        <section className="section-blog featured section">
-            <div className="section-container">
-                <h2>Latest  Nominations For <br /> <span>BookLet Award</span> </h2>
-            
+        
+            <section className="section-blog featured section">
+                <div className="section-container">
+                    <h2>Latest  Nominations For <br /> <span>BookLet Award</span> </h2>
+                
 
-                {latestBooks.map(book => <LatestBook key={book._id} {...book} />)}
-               
-                {!latestBooks.length &&  <h4> There are no nominations yet.</h4> }
-              
-            </div>
-        </section>
+                    {latestBooks.map(book => <LatestBook key={book._id} {...book} />)}
+                
+                    {!latestBooks.length &&  <h4> There are no nominations yet.</h4> }
+                
+                </div>
+            </section>
+     
     );
 }
