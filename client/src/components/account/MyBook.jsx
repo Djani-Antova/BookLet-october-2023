@@ -14,31 +14,33 @@ export default function LatestBook ({
 }) {
 
     return(
-        <article className="entry">
-            <div className="media">
-                <img
-                    src={imageUrl}
-                    alt={`${title}'s poster`}
-                    style={{ width: "152px", height: "227px" }}
-                />
-            </div>
-            <section className="entry-content">
-                <div className="meta">
-                    <div className="tags">
-                    <label>{formatDate(publishedAt)}</label>
-                    </div>
-                    <p className="genre">{genre}</p>
+        <div className="table-wrapper">   
+            <article className="entry">
+                <div className="media">
+                    <img
+                        src={imageUrl}
+                        alt={`${title}'s poster`}
+                        style={{ width: "152px", height: "227px" }}
+                    />
                 </div>
-            <header className="entry-header">
-                <h4>{title}</h4>
-            </header>
-            <p className="short-desc">{desc}</p>
-            <p>
-                <Link to={`/books/${_id}`} className="read-more"> Read more</Link>
-            </p>
+                <section className="entry-content">
+                    <div className="meta">
+                        <div className="tags">
+                        <label>{formatDate(publishedAt)}</label>
+                        </div>
+                        <p className="genre">{genre}</p>
+                    </div>
+                <header className="entry-header">
+                    <h4>{title}</h4>
+                </header>
+                <p className="short-desc">{desc}</p>
+                <p>
+                    <Link to={`/books/${_id}`} className="read-more"> Read more</Link>
+                </p>
 
-            </section>
-        </article>
+                </section>
+            </article>
+        </div>
 );
     
 }
