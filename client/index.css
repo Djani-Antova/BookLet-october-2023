@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background-image: url('./images/homeBackgroun.PNG'); 
+  background-image: url(images/homeBackgroun.PNG); 
   background-size: cover;
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
