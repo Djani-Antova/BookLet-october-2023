@@ -18,33 +18,50 @@ This React-based web application serves as a platform for users to nominate book
 ## Site overview 
 ### Every page contains navigation
 - Guest users - see guest navigation
+ ![not-logged user navigation](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/a009b0b5-ff7e-4334-95a7-40b212fb690e)
 - Logged in users - see loggedin navigation
-   
+   ![logged user navigation](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/bc1a49a7-13db-4869-8bd0-b733c8dd2269)
+
 ### Every page contains footer
+- All users see footer
+   ![footer](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/060808ef-1855-4e4f-b5e0-3def3d4b3a4c)
 
 ### Home page
 - Public page for all users. 
+   ![home-page](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/26d6bfa6-6983-4df6-a75e-586a2cec1290)
 
 ### Section showing all nominated books 
-- Public page for all users. 
+- Public page for all users.
+   ![nominations-list page](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/c9eea415-1518-48dc-9b79-902cfd492740)
+
 
 ### Section showing latest 3 nominated books: 
 - Public page for all users. 
+   ![latest-three-page](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/eaf04b14-82dc-479c-8d9b-d5ccc2b4c65d)
 
 ### Section showing book details and comments for the book: 
 - Public page for all users. 
+   ![details-page-guest](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/bcbafa8f-4adc-4f53-bef2-7a29e1dd5e12)
 
 ### Section showing book details, comments for the book and option to add a comment: 
 - Private page only for logged in users.
+   ![details-page-logged-in](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/f4a9991e-fcd9-40a3-851f-601a434d3c43)
 
 ### Section showing book details, comments for the book, option to add a comment and options to edit and delete nomination: 
 - Private page only for the creator of the book.
+   ![details-page-owner](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/4a24c91f-5e84-4ef9-bdab-8c26f106e3d4)
 
 ### Section displaying form for nominating a book
 - Private page only for logged in users.
-
+   ![create-book](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/eb925174-8d5c-401b-abc3-a3d0952fed10)
+  
 ### Section displaying nominated books by a user
 - Private page only for logged in users.
+   ![profile-page](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/88f8f83a-80e7-496b-8c80-1010b216be33)
+
+### Section displaying error fetching data
+- Public page for all users
+   ![error-fetching](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/66bc35e5-66ea-4a09-9ef4-5a4390af125c)
 
 ## CRUD Operations
 
