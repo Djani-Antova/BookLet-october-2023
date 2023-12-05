@@ -15,6 +15,11 @@ This React-based web application serves as a platform for users to nominate book
 ## Deployment
 - Project deployed with Firebase - https://react-booklet-oct2023-b1365.web.app/
 
+## Demo users
+  - peter@abv.bg       pass: 123456;
+  - george@abv.bg      pass: 123456;
+
+
 ## Site overview 
 ### Every page contains navigation
 - Guest users - see guest navigation
