@@ -26,14 +26,14 @@ const request = async (method, url, data) => {
         method,
     });
 
-    if (response.status === 204 ) {  // because of specificity in Practice server
+    if (response.status === 204 ) {  
         return {}
     }
 
     const result = await response.json();
 
     if(!response.ok) {
-        throw result;       // this throws exception TODO error handling
+        throw result;      
     }
 
     return result;

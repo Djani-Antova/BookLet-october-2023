@@ -30,8 +30,6 @@ export const AuthProvider = ({
     const registerSubmitHandler = async (values) => {
         const result = await authService.register(values.name, values.email, values.username, values.password)
 
-        //TODO here or where validation for password and confirmPassword
-
         setAuth(result);
 
         localStorage.setItem('accessToken', result.accessToken);
@@ -57,9 +55,7 @@ export const AuthProvider = ({
     return (
         <AuthContext.Provider value={values}>
             {children}
-
         </AuthContext.Provider>
-
     )
 
 }
