@@ -13,22 +13,38 @@ This React-based web application serves as a platform for users to nominate book
 4. For convenience, preliminary seeded data comprising books and comments has been provided.
 
 ## Deployment
-- Project DEMO deployed with Firebase - https://react-booklet-oct2023-b1365.web.app/
+- Project deployed with Firebase - https://react-booklet-oct2023-b1365.web.app/
 
 ## Site overview 
 ### Every page contains navigation
-- Guest user
-
-- Logged in user
+- Guest users - see guest navigation
+- Logged in users - see loggedin navigation
+   
 ### Every page contains footer
 
-
 ### Home page
-Public page for all users. 
+- Public page for all users. 
 
-#### Section showing all nominated books: 
+### Section showing all nominated books 
+- Public page for all users. 
 
-#### Section showing latest 3 nominated books: 
+### Section showing latest 3 nominated books: 
+- Public page for all users. 
+
+### Section showing book details and comments for the book: 
+- Public page for all users. 
+
+### Section showing book details, comments for the book and option to add a comment: 
+- Private page only for logged in users.
+
+### Section showing book details, comments for the book, option to add a comment and options to edit and delete nomination: 
+- Private page only for the creator of the book.
+
+### Section displaying form for nominating a book
+- Private page only for logged in users.
+
+### Section displaying nominated books by a user
+- Private page only for logged in users.
 
 ## CRUD Operations
 
