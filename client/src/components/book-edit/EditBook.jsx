@@ -92,7 +92,7 @@ export default function EditBook() {
   };
 
   const handleCancel = () => {
-    navigate('/books');
+    navigate(-1);
   };
 
   return (
