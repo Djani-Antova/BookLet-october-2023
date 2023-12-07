@@ -20,7 +20,6 @@ export default function useLocalStorage(key, defaultValue) {
         } else {
             serializedValue = JSON.stringify(value);    
         }
-
         localStorage.setItem(key, serializedValue)
     }
 
