@@ -71,7 +71,7 @@ This React-based web application serves as a platform for users to nominate book
 - Public area for all users
    ![error-fetching](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/66bc35e5-66ea-4a09-9ef4-5a4390af125c)
 
-### Logo and favicon added for better UI
+### Toast notifications, some with animated features, logo and favicon added for better UI
 
 - ![logo](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/18d97802-0a2d-4c98-b2d5-a9752c2c05b3)  
 - ![favicon](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/db3ac993-6af7-4996-a1a7-7b4da9fbf4ad)
