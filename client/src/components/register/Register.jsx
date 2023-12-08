@@ -1,4 +1,6 @@
 import { useContext, useState } from "react";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import AuthContext from "../../contexts/authContext";
 import { useNavigate, Link } from "react-router-dom";
 import {
@@ -69,8 +71,8 @@ export default function Register() {
       runSuccessfulRegistration();
       navigate(Path.Home);
     } catch (error) {
-      // TODO Handle registration failure (e.g., display an error message)
-      console.error(error);
+      console.error("Error during registration:", error);
+      toast.info('Registration failed. Please try again.');
     }
   };
 
@@ -151,6 +153,7 @@ export default function Register() {
               value={values.confirmPassword}
             />
           </div>
+
           <input className="submit-btn" type="submit" />
           <p className="login-redirect">
             Already have an account?
@@ -160,6 +163,8 @@ export default function Register() {
             </Link>
           </p>
         </form>
+
+        <ToastContainer /> {/* React Toastify container */}
       </div>
     </div>
   );
