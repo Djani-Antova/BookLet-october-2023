@@ -12,10 +12,10 @@ export default function Latest() {
         bookService.getLatest()
             .then((result) => {
                 setLatestBooks(result);
-                setError(null); // Clear any previous errors
+                setError(null); 
             })
             .catch((err) => {
-                console.error(err); // Log the error for debugging
+                console.error(err); 
                 setError('Error fetching latest books. Please try again later.');
             });
     }, []); 

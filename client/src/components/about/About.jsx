@@ -6,10 +6,6 @@ export default function About() {
     <section className="about-section">
       <div className="about-container">
         <h2 className="about-section-heading">About BookLet Forum</h2>
-        {/* <p>
-  BookLet is a place for avid book enthusiasts to nominate their favorite reads for the prestigious Booker Prize.
-</p> */}
-
         <h3 className="how-it-works">How It Works</h3>
         <ol>
           <li>Explore the existing nominations and discussions.</li>
@@ -35,8 +31,7 @@ export default function About() {
             <li>Avoid offensive language and content.</li>
             <li>Ensure your nominations align with the forum's purpose.</li>
           </ul>
-        
-        {/* ... Rest of the component ... */}
+    
       </div>
     </section>
   );

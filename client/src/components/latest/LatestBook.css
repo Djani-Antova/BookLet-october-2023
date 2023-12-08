@@ -14,7 +14,6 @@
 
 .entry .media {
     flex: 1 1 auto;
-    /* aspect-ratio: 1/1; */
     overflow:hidden;
     max-height: 17em;
 }

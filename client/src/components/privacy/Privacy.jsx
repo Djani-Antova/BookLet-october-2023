@@ -1,5 +1,3 @@
-// Privacy.js
-
 import React from 'react';
 import './Privacy.css';
 

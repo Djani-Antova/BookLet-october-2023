@@ -39,7 +39,6 @@
     padding-bottom: 0.5rem;
     color: #4d7d83;
     font-weight: bolder;
-    /* font-size: ; */
     padding-left: 0.85rem;
 }
 
@@ -52,7 +51,6 @@
 
 .login-link:hover {
     text-decoration: underline;
-
 }
 
 .first-name,
@@ -65,7 +63,6 @@
     flex-direction: column;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-
 }
 
 

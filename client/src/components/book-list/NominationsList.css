@@ -2,15 +2,12 @@
     height: calc(100% - 60px);
 }
 
-
 .table-wrapper {
     background: #DFF0F1;
     padding: 2em;
     margin-bottom: 10em;
     border-radius: 7px;
-
 }
-
 
 .section-container {
     max-width: 1200px;
@@ -31,7 +28,6 @@
 
 .entry .media {
     flex: 1 1 40%;
-    /* aspect-ratio: 1/1; */
     border-radius: 0.5em;
     max-height: 17em;
     margin-left: 1em;

@@ -20,7 +20,6 @@ import './CreateBook.css';
 export default function CreateBook() {
   const navigate = useNavigate();
 
-  // State to manage form data
   const [formData, setFormData] = useState({
       title: '',
       author: '',

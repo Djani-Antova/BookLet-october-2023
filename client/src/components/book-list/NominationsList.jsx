@@ -4,7 +4,7 @@ import { useBookData } from "../hooks/useBookData";
 import './NominationsList.css';
 
 export default function NominationsList() {
-    const { books, error } = useBookData(); // Use the custom hook
+    const { books, error } = useBookData(); 
 
     return (
         <section className="section-blog featured section">

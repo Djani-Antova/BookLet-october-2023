@@ -41,7 +41,7 @@ export default function EditBook() {
   };
 
   const validateForm = () => {
-    // Check for empty input values
+  
     if (book.title === '') {
       runEmptyTitleInput();
       return false;
@@ -72,7 +72,7 @@ export default function EditBook() {
       return false;
     }
 
-    return true; // Form is valid
+    return true; 
   };
 
   const handleSubmit = async (e) => {

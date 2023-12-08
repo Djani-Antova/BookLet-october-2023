@@ -1,4 +1,3 @@
-// Cookies.jsx
 import React from 'react';
 
 import './Cookies.css';
