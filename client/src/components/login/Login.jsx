@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
+import { toast, ToastContainer } from 'react-toastify';
 
 import AuthContext from "../../contexts/authContext";
 
@@ -47,8 +48,8 @@ export default function Login() {
         onLoginSuccess();
         navigate("/");
     } catch (error) {
-        runInvalidSignIn();
-        console.error(error);
+        console.error("Error during login:", error);
+        toast.info('Login failed. Please try again.');
     }
     };
 
@@ -96,6 +97,7 @@ export default function Login() {
                 Sign up
             </Link>
             </p>
+            <ToastContainer /> {/* React Toastify container */}
         </form>
         </div>
     </div>
