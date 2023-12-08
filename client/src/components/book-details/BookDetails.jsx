@@ -22,7 +22,7 @@ function BookDetails() {
   const { bookId } = useParams();
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchedData = async () => {
       try {
         const bookData = await bookService.getOne(bookId);
         const commentsData = await commentService.getAll(bookId);
@@ -36,7 +36,7 @@ function BookDetails() {
       }
     };
 
-    fetchData();
+    fetchedData();
   }, [bookId]);
 
   const addCommentHandler = async (e) => {
