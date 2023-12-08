@@ -29,7 +29,7 @@ function BookDetails() {
 
         setBook(bookData);
         setComments(commentsData);
-        setError(null); // Clear any previous errors
+        setError(null); 
       } catch (error) {
         console.error("Error fetching book details or comments:", error);
         setError('Error fetching book details or comments. Please try again later.');
@@ -42,7 +42,6 @@ function BookDetails() {
   const addCommentHandler = async (e) => {
     e.preventDefault();
 
-    // Check if the comment is empty
     if (!newComment.trim()) {
       runEmptyFieldAlert();
       return;
@@ -56,7 +55,7 @@ function BookDetails() {
         { ...createdComment, owner: { username } },
       ]);
 
-      setNewComment(""); // Reset the new comment state to clear the textarea
+      setNewComment(""); 
     } catch (error) {
       console.error("Error adding comment:", error);
       setError('Error adding comment. Please try again later.');
