@@ -24,7 +24,7 @@ This React-based web application serves as a platform for users to nominate book
 ### Every page contains navigation
 - Guest users see guest navigation
  ![not-logged user navigation](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/a009b0b5-ff7e-4334-95a7-40b212fb690e)
-- Logged in users - see loggedin navigation
+- Logged in users see logged-in navigation
    ![logged user navigation](https://github.com/Djani-Antova/BookLet-october-2023/assets/113636096/bc1a49a7-13db-4869-8bd0-b733c8dd2269)
 
 ### Every page contains footer
