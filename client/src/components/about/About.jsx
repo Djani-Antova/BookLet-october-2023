@@ -8,7 +8,7 @@ export default function About() {
         <h2 className={styles["about-section-heading"]}>About BookLet Forum</h2>
         <h3 className={styles["how-it-works"]}>How It Works</h3>
         <ol>
-          <li>Explore the existing nominations and discussions.</li>
+          <li>Explore existing nominations and discussions.</li>
           <li>Ready to nominate? Login or register beforehand.</li>
           <li>Fill in the details of the book you are nominating.</li>
           <li>Engage in discussions by commenting on nominations.</li>
