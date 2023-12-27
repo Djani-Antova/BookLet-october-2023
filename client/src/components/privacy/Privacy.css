@@ -1,29 +1,31 @@
+body {
+  background-image: url(images/homeBackgroun.PNG);
+}
 .privacy-container {
-    padding: 2em;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .privacy-container h2 {
-    margin-top: -0.2em;
-    border-bottom: 2px solid bisque;
-    padding-bottom: 0.5em;
-    margin-bottom: 0.7em;
-    color: bisque;
-  }
-  
-  .privacy-container h3 {
-    color: bisque;
-  }
-  
-  .privacy-container ol,
-  .privacy-container ul {
-    margin-bottom: 0.8em;
-    margin-left: 19px;
-  }
-  
-  .privacy-container p {
-    line-height: 1.7;
-    font-size: 1em;
-  }
-  
+  padding: 2em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.privacy-container h2 {
+  margin-top: -0.2em;
+  border-bottom: 2px solid bisque;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.7em;
+  color: bisque;
+}
+
+.privacy-container h3 {
+  color: bisque;
+}
+
+.privacy-container ol,
+.privacy-container ul {
+  margin-bottom: 0.8em;
+  margin-left: 19px;
+}
+
+.privacy-container p {
+  line-height: 1.7;
+  font-size: 1em;
+}
