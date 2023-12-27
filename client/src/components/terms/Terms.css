@@ -1,4 +1,7 @@
 /* Terms.css */
+body {
+  background-image: url(images/homeBackgroun.PNG);
+}
 
 .terms-container {
     padding: 2em;
