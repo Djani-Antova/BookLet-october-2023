@@ -1,11 +1,9 @@
 import React from 'react';
-
 import './Cookies.css';
 
 export default function Cookies() {
     return (
         <div className="cookies-container">
-            <div className="about-section">
             <h2 className="about-section-heading">Cookie Settings</h2>
 
             <p>
@@ -25,7 +23,6 @@ export default function Cookies() {
                 You can control and manage cookies in your browser settings. Please refer to your browser's
                 help or support documentation for more information on how to do this.
             </p>
-            </div>
         </div>
     );
 }
