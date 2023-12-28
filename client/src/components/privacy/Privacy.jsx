@@ -34,18 +34,7 @@ export default function Privacy() {
             unauthorized access or disclosure. However, no method of transmission
             over the internet or electronic storage is completely secure.
             </p>
-
-            <h3>Third-Party Links</h3>
-            <p>
-            Our website may contain links to third-party websites. We are not
-            responsible for the privacy practices or content of these websites.
-            Please review the privacy policies of those third parties.
-            </p>
-
-            <p>
-            If you have any questions or concerns about our Privacy Policy, please
-            contact us at privacy@booklet.com.
-            </p>
+            
         </div>
     );
 }
