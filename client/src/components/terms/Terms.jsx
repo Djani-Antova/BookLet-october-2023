@@ -5,7 +5,7 @@ import './Terms.css';
 
 export default function Terms() {
     return (
-        <div className="terms-container">
+        <div className="privacy-container">
             <h2 className="about-section-heading">Terms of Service</h2>
 
             <p>
